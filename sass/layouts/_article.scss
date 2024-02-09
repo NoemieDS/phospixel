@@ -1,0 +1,21 @@
+.article-base {
+  margin-bottom: $espacement_grand;
+  padding: $espacement_xl;
+  width: 100%;
+}
+
+.article-base p {
+  @media screen and (min-width: $largeur__tablette) {
+    margin: 0 auto;
+    max-width: 90%;
+  }
+}
+
+.article-extrait {
+  padding: 0;
+  margin: $espacement_xl;
+
+  & h3 {
+    text-align: center;
+  }
+}

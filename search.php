@@ -9,8 +9,8 @@
  */
 ?>
 <?php get_header(); ?>
-<main class="site-main">
-  <article id="post-<?php the_ID(); ?>" <?php post_class('widget-accueil-1'); ?>>
+<main class="site-main bloc-flex-cl-ct">
+  <article id="post-<?php the_ID(); ?>" <?php post_class('article-base'); ?>>
     <h1>Résultats de la recherche</h1>
     <?php
     if (have_posts()) :

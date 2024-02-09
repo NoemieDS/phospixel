@@ -8,15 +8,14 @@
  */
 
 ?>
-<footer class="site-footer">
+<footer class="site-footer bloc-flex-cl">
   <?php
   get_sidebar();
   ?>
-  <section class="site-info">
+  <section class="site-info bloc-flex-rw-ct">
     <p class="site-date">© <?= date("Y") ?> </p>
-    <?php
-    printf(esc_html__('Thème : PhōsPixel %2$s', 'phospixel'), 'phospixel', '<a href="http://ndasilva.ca">Noémie da Silva</a>');
-    ?>
+    <a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a>
+    <a href="http://ndasilva.ca">Noémie da Silva</a>
   </section>
 </footer>
 </body>

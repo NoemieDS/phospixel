@@ -1,0 +1,19 @@
+.heros-texte {
+  border-bottom: $couleur__texte 1px solid;
+  color: $couleur__titre;
+  font-size: clamp(1.7rem, -0.0385rem + 3vw, 2rem);
+  line-height: 110%;
+  padding: $espacement_grand;
+
+  @media screen and (min-width: $largeur__tablette) {
+    width: 70%;
+  }
+
+  @media screen and (min-width: $largeur__bureau) {
+    width: 60%;
+  }
+
+  @media screen and (min-width: $largeur__bureau_large) {
+    width: 50%;
+  }
+}

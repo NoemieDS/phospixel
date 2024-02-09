@@ -11,12 +11,12 @@
 get_header();
 ?>
 
-<main class="site-main-404">
+<main class="site-main site-main-404">
 
   <section>
     <h2><?php esc_html_e('Oups ! '); ?></h2>
-  </section><!-- .error-404 -->
-</main><!-- #main -->
+  </section>
+</main>
 
 <?php
 get_footer();

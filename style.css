@@ -455,29 +455,6 @@ figcaption {
   transform: translateY(-0.2rem);
 }
 
-.heros-texte {
-  border-bottom: hsl(0, 0%, 6%) 1px solid;
-  color: hsl(220, 95%, 50%);
-  font-size: clamp(2rem, -0.0385rem + 3vw, 2rem);
-  line-height: 110%;
-  padding: 1.8rem;
-}
-@media screen and (min-width: 800px) {
-  .heros-texte {
-    width: 70%;
-  }
-}
-@media screen and (min-width: 992px) {
-  .heros-texte {
-    width: 60%;
-  }
-}
-@media screen and (min-width: 1800px) {
-  .heros-texte {
-    width: 50%;
-  }
-}
-
 /* 
 ** Tout ce qui concerne la balise body
 ** 
@@ -506,7 +483,7 @@ a:hover, a:active {
 }
 
 form {
-  max-width: 70%;
+  max-width: 90%;
 }
 @media screen and (min-width: 800px) {
   form {
@@ -533,19 +510,8 @@ input:focus {
   outline-color: hsl(220, 95%, 50%);
 }
 
-.article-extrait {
-  padding: 0;
-  margin: 2.4rem;
-}
-.article-extrait h3 {
-  text-align: center;
-}
-
 .entete-barre {
-  align-items: center;
   background-color: hsl(0, 0%, 6%);
-  display: flex;
-  justify-content: space-between;
   padding: 0.6rem 1.2rem;
 }
 .entete-barre h1,
@@ -579,9 +545,6 @@ input:focus {
 }
 
 .site-main {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
   min-height: 60vh;
   margin-bottom: 2.4rem;
   width: 100%;
@@ -589,12 +552,9 @@ input:focus {
 
 .site-main-404 {
   min-height: 5vh;
-  margin-bottom: 2.4rem;
 }
 
 .site-footer {
-  display: flex;
-  flex-direction: column;
   padding-bottom: 1.2rem;
   margin: 2.4rem 0;
   padding: 0 2.4rem;
@@ -602,33 +562,17 @@ input:focus {
 }
 
 .site-info {
-  align-items: center;
-  display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
   font-family: "Roboto", sans-serif;
   font-weight: 500;
-  padding: 0;
   margin-top: 1.8rem;
 }
 .site-info .site-date,
 .site-info a,
 .site-info p {
+  color: hsl(0, 0%, 6%);
   font-size: clamp(0.8rem, 1.0887rem + 0.1453vw, 1.4375rem);
   line-height: 100%;
-}
-
-.widget-accueil-1 {
-  margin-bottom: 1.8rem;
-  padding: 2.4rem;
-  width: 100%;
-}
-
-@media screen and (min-width: 800px) {
-  .widget-accueil-1 p {
-    margin: 0 auto;
-    max-width: 90%;
-  }
 }
 
 #menu-secondaire .wp-block-heading {
@@ -637,11 +581,74 @@ input:focus {
   margin: inherit;
 }
 
-#menu-secondaire li,
 #menu-secondaire a {
   line-height: 120%;
+  padding-top: 0.6rem;
 }
 
 .widget-h2-sidebar {
   padding-top: 1.2rem;
+}
+
+.article-base {
+  margin-bottom: 1.8rem;
+  padding: 2.4rem;
+  width: 100%;
+}
+
+@media screen and (min-width: 800px) {
+  .article-base p {
+    margin: 0 auto;
+    max-width: 90%;
+  }
+}
+
+.article-extrait {
+  padding: 0;
+  margin: 2.4rem;
+}
+.article-extrait h3 {
+  text-align: center;
+}
+
+/*Rangées*/
+.bloc-flex-rw-ct {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+/*Colonnes*/
+.bloc-flex-cl {
+  display: flex;
+  flex-direction: column;
+}
+
+.bloc-flex-cl-ct {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.heros-texte {
+  border-bottom: hsl(0, 0%, 6%) 1px solid;
+  color: hsl(220, 95%, 50%);
+  font-size: clamp(1.7rem, -0.0385rem + 3vw, 2rem);
+  line-height: 110%;
+  padding: 1.8rem;
+}
+@media screen and (min-width: 800px) {
+  .heros-texte {
+    width: 70%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .heros-texte {
+    width: 60%;
+  }
+}
+@media screen and (min-width: 1800px) {
+  .heros-texte {
+    width: 50%;
+  }
 }/*# sourceMappingURL=style.css.map */

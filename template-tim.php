@@ -20,9 +20,9 @@ $tim_posts_query  = new WP_Query($args);
 get_header();
 ?>
 
-<main class="site-main">
+<main class="site-main bloc-flex-cl-ct">
 
-  <article id="post-<?php the_ID(); ?>" <?php post_class('widget-accueil-1'); ?>>
+  <article id="post-<?php the_ID(); ?>" <?php post_class('article-base'); ?>>
     <?php
     the_content(); // Affiche le contenu de l'article fait dans WordPress
     ?>
@@ -37,7 +37,8 @@ get_header();
     ?>
         <article class="article-extrait">
           <h3><?php the_title(); ?></h3>
-          <div><a href="<?php the_permalink(); ?>"><?php the_content(); ?></a></div>
+          <a href="<?php the_permalink(); ?>">
+            <?php the_content(); ?></a>
         </article>
     <?php
       endwhile;

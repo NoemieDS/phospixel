@@ -1,16 +1,3 @@
-.widget-accueil-1 {
-  margin-bottom: $espacement_grand;
-  padding: $espacement_xl;
-  width: 100%;
-}
-
-.widget-accueil-1 p {
-  @media screen and (min-width: $largeur__tablette) {
-    margin: 0 auto;
-    max-width: 90%;
-  }
-}
-
 // menu secondaire - widget 1 - balise aside
 #menu-secondaire .wp-block-heading {
   color: $couleur__texte;
@@ -18,9 +5,9 @@
   margin: inherit;
 }
 
-#menu-secondaire li,
 #menu-secondaire a {
   line-height: 120%;
+  padding-top: $espacement_petit;
 }
 
 .widget-h2-sidebar {

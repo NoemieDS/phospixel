@@ -1,0 +1,18 @@
+/*Rangées*/
+.bloc-flex-rw-ct {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+/*Colonnes*/
+.bloc-flex-cl {
+  display: flex;
+  flex-direction: column;
+}
+
+.bloc-flex-cl-ct {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}

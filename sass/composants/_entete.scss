@@ -1,8 +1,5 @@
 .entete-barre {
-  align-items: center;
   background-color: $couleur__background-entete;
-  display: flex;
-  justify-content: space-between;
   padding: $espacement_petit $espacement_moyen;
 
   & h1,

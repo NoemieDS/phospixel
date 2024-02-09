@@ -24,7 +24,7 @@ $accueil_posts_query = new WP_Query($args);
 get_header();
 ?>
 
-<main class="site-main">
+<main class="site-main bloc-flex-cl-ct">
 
   <?php dynamic_sidebar('accueil'); ?>
 
@@ -39,7 +39,8 @@ get_header();
     ?>
         <article class="article-extrait">
           <h3><?php the_title(); ?></h3>
-          <div><a href="<?php the_permalink(); ?>"><?php the_content(); ?></a></div>
+          <a href="<?php the_permalink(); ?>">
+            <?php the_content(); ?></a>
         </article>
     <?php
       endwhile;

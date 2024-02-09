@@ -24,7 +24,7 @@
 <body <?php body_class(); ?>> <!-- ajoute des classes et des infos personnalisées en fonction de la page affichée  -->
 	<?php wp_body_open(); ?> <!-- barre admin de WP -->
 
-	<header class="entete-barre">
+	<header class="entete-barre bloc-flex-rw-ct">
 		<div>
 			<?php
 			the_custom_logo();

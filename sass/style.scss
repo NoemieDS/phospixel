@@ -24,15 +24,19 @@ Text Domain: phospixel
 @import "variables/dimensions";
 @import "variables/heading";
 
-///////////////////////////////////////////////////BASE///////////////////
-@import "base/body";
-@import "base/liens";
-@import "base/champ";
+///////////////////////////////////////////////////ELEMENTS///////////////////
+@import "elements/body";
+@import "elements/liens";
+@import "elements/champ";
 
 ////////////////////////////////////////////////COMPOSANTS///////////////////
-@import "composants/article";
 @import "composants/entete";
 @import "composants/navigation";
 @import "composants/main";
 @import "composants/pied2page";
 @import "composants/widgets";
+
+////////////////////////////////////////////////LAYOUTS///////////////////
+@import "layouts/article";
+@import "layouts/flex";
+@import "layouts/vedette";
