@@ -37,10 +37,27 @@ get_header();
       // Boucle sur les articles
       while ($accueil_posts_query->have_posts()) : $accueil_posts_query->the_post();
     ?>
-        <article class="bloc-flex-cl-ct article-extrait">
-          <h3><?php the_title(); ?></h3>
-          <a class="bloc-flex-cl-ct article-extrait" href="<?php the_permalink(); ?>">
-            <?php the_content(); ?></a>
+        <article class="article-extrait bloc-flex-cl-ct">
+          <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+          <?php
+          $contenu = get_the_content();
+          preg_match('/<svg.*?>(.*?)<\/svg>/s',  $contenu, $match);
+
+          if (!empty($match[0])) {
+            // Affiche le contenu SVG
+            echo $match[0];
+          } elseif (has_post_thumbnail()) {
+            // Affiche l'image mise en avant (post thumbnail)
+
+            $thumbnail_url = get_the_post_thumbnail_url(get_the_ID(), 'large');
+            echo '<img src="' . esc_url($thumbnail_url) . '" alt="' . esc_attr(get_the_title()) . '">';
+          } else {
+            // Affiche le titre de l'article et les 20 premiers mots de the_content()
+            $contenu_mots = preg_split("/[\s,]+/", strip_tags($contenu));
+            $extrait = implode(' ', array_slice($contenu_mots, 0, 20));
+            echo wpautop($extrait) . '...'; // Ajout de la balise <p> et des points de suspension
+          }
+          ?>
         </article>
     <?php
       endwhile;

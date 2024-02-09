@@ -20,10 +20,12 @@ h2 {
   text-align: center;
 }
 
-h3 {
+h3,
+h3 > a {
   font-family: $police__titre;
   font-size: clamp(1.375rem, 1.3591rem + 0.0847vw, 1.5625rem);
   font-weight: $police__titre-weight-leger;
+  margin: $espacement_moyen;
 }
 
 h4 {
