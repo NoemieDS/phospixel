@@ -1,6 +1,11 @@
 .site-main {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
   min-height: 60vh;
+
   margin-bottom: $espacement_xl;
+  width: 100%;
 }
 
 .site-main-404 {

@@ -364,9 +364,12 @@ li {
 CSS Clam font-size generator : https://clamp.font-size.app/
 */
 h1 {
+  color: hsl(220, 95%, 50%);
   font-family: "Roboto", sans-serif;
   font-size: clamp(1.3rem, -0.0385rem + 3vw, 2rem);
   font-weight: 800;
+  margin: 0.6rem 1.8rem 1.2rem 1.8rem;
+  text-align: center;
 }
 
 h2 {
@@ -457,7 +460,22 @@ figcaption {
   color: hsl(220, 95%, 50%);
   font-size: clamp(2rem, -0.0385rem + 3vw, 2rem);
   line-height: 110%;
-  padding: 2.4rem;
+  padding: 1.8rem;
+}
+@media screen and (min-width: 800px) {
+  .heros-texte {
+    width: 70%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .heros-texte {
+    width: 60%;
+  }
+}
+@media screen and (min-width: 1800px) {
+  .heros-texte {
+    width: 50%;
+  }
 }
 
 /* 
@@ -488,7 +506,22 @@ a:hover, a:active {
 }
 
 form {
-  max-width: 90%;
+  max-width: 70%;
+}
+@media screen and (min-width: 800px) {
+  form {
+    max-width: 50%;
+  }
+}
+@media screen and (min-width: 992px) {
+  form {
+    max-width: 40%;
+  }
+}
+@media screen and (min-width: 1800px) {
+  form {
+    max-width: 30%;
+  }
 }
 
 input {
@@ -514,6 +547,10 @@ input:focus {
   display: flex;
   justify-content: space-between;
   padding: 0.6rem 1.2rem;
+}
+.entete-barre h1,
+.entete-barre a {
+  margin: 0.6rem;
 }
 
 .entete-barre a,
@@ -542,8 +579,12 @@ input:focus {
 }
 
 .site-main {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
   min-height: 60vh;
   margin-bottom: 2.4rem;
+  width: 100%;
 }
 
 .site-main-404 {
@@ -555,16 +596,19 @@ input:focus {
   display: flex;
   flex-direction: column;
   padding-bottom: 1.2rem;
-  margin: 2.4rem;
+  margin: 2.4rem 0;
+  padding: 0 2.4rem;
+  width: 100%;
 }
 
 .site-info {
-  align-items: flex-end;
+  align-items: center;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   font-family: "Roboto", sans-serif;
   font-weight: 500;
+  padding: 0;
   margin-top: 1.8rem;
 }
 .site-info .site-date,
@@ -577,6 +621,14 @@ input:focus {
 .widget-accueil-1 {
   margin-bottom: 1.8rem;
   padding: 2.4rem;
+  width: 100%;
+}
+
+@media screen and (min-width: 800px) {
+  .widget-accueil-1 p {
+    margin: 0 auto;
+    max-width: 90%;
+  }
 }
 
 #menu-secondaire .wp-block-heading {
@@ -587,7 +639,7 @@ input:focus {
 
 #menu-secondaire li,
 #menu-secondaire a {
-  line-height: 110%;
+  line-height: 120%;
 }
 
 .widget-h2-sidebar {

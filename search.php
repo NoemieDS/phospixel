@@ -10,15 +10,15 @@
 ?>
 <?php get_header(); ?>
 <main class="site-main">
-  <article>
-    <h2>Résultats de la recherche</h2>
+  <article id="post-<?php the_ID(); ?>" <?php post_class('widget-accueil-1'); ?>>
+    <h1>Résultats de la recherche</h1>
     <?php
     if (have_posts()) :
       while (have_posts()) : the_post();
         $lien = get_permalink();
         $lire = "<a href='" . $lien . "'> [...]</a>"; ?>
         <div>
-          <h4><a href="<?php the_permalink(); ?>"> <?= get_the_title(); ?></a></h4>
+          <h3><a href="<?php the_permalink(); ?>"> <?= get_the_title(); ?></a></h3>
           <p><?= wp_trim_words(get_the_excerpt(), 30, $lire) ?></p>
           <hr>
         </div>

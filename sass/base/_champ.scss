@@ -1,5 +1,16 @@
 form {
-  max-width: 90%;
+  max-width: 70%;
+  @media screen and (min-width: $largeur__tablette) {
+    max-width: 50%;
+  }
+
+  @media screen and (min-width: $largeur__bureau) {
+    max-width: 40%;
+  }
+
+  @media screen and (min-width: $largeur__bureau_large) {
+    max-width: 30%;
+  }
 }
 
 input {

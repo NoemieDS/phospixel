@@ -28,22 +28,16 @@
 		<div>
 			<?php
 			the_custom_logo();
-			if (is_front_page() && is_home()) :
 			?>
-				<h1><a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a></h1>
+			<h1><a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a></h1>
 			<?php
-			else :
-			?>
-				<p><a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a></p>
-			<?php
-			endif;
 			$phospixel_description = get_bloginfo('description', 'display');
 			if ($phospixel_description || is_customize_preview()) :
 			?>
 				<p class="site-description"><?php echo $phospixel_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped 
 																		?></p>
 			<?php endif; ?>
-		</div><!-- .site-identité -->
+		</div>
 
 
 		<!-- Navigation principale (nav) -->

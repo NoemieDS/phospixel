@@ -4,4 +4,9 @@
   display: flex;
   justify-content: space-between;
   padding: $espacement_petit $espacement_moyen;
+
+  & h1,
+  a {
+    margin: $espacement_petit;
+  }
 }

@@ -8,7 +8,6 @@
  */
 
 ?>
-
 <footer class="site-footer">
   <?php
   get_sidebar();
@@ -20,7 +19,6 @@
     ?>
   </section>
 </footer>
-
 </body>
 
 </html>

@@ -3,9 +3,13 @@ CSS Clam font-size generator : https://clamp.font-size.app/
 */
 
 h1 {
+  color: $couleur__titre;
   font-family: $police__titre;
   font-size: clamp(1.3rem, -0.0385rem + 3vw, 2rem);
   font-weight: $police__titre-weight;
+  margin: $espacement_petit $espacement_grand $espacement_moyen
+    $espacement_grand;
+  text-align: center;
 }
 h2 {
   color: $couleur__titre;
@@ -90,5 +94,17 @@ figcaption {
   color: $couleur__titre;
   font-size: clamp(2rem, -0.0385rem + 3vw, 2rem);
   line-height: 110%;
-  padding: $espacement_xl;
+  padding: $espacement_grand;
+
+  @media screen and (min-width: $largeur__tablette) {
+    width: 70%;
+  }
+
+  @media screen and (min-width: $largeur__bureau) {
+    width: 60%;
+  }
+
+  @media screen and (min-width: $largeur__bureau_large) {
+    width: 50%;
+  }
 }
