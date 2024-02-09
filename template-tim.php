@@ -37,7 +37,7 @@ get_header();
     ?>
         <article class="article-extrait">
           <h3><?php the_title(); ?></h3>
-          <a href="<?php the_permalink(); ?>">
+          <a class="bloc-flex-cl-ct article-extrait" href="<?php the_permalink(); ?>">
             <?php the_content(); ?></a>
         </article>
     <?php

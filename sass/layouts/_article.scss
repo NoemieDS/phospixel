@@ -15,6 +15,9 @@
   padding: 0;
   margin: $espacement_xl;
 
+  & h2 {
+    line-height: 130%;
+  }
   & h3 {
     text-align: center;
   }

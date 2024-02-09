@@ -607,6 +607,9 @@ input:focus {
   padding: 0;
   margin: 2.4rem;
 }
+.article-extrait h2 {
+  line-height: 130%;
+}
 .article-extrait h3 {
   text-align: center;
 }

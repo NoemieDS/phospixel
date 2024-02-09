@@ -29,7 +29,7 @@ get_header();
   <?php dynamic_sidebar('accueil'); ?>
 
   <!-- Articles de la catégorie accueil -->
-  <section>
+  <section class="bloc-flex-cl-ct">
     <?php
 
     // Vérifier si des articles sont trouvés
@@ -37,9 +37,9 @@ get_header();
       // Boucle sur les articles
       while ($accueil_posts_query->have_posts()) : $accueil_posts_query->the_post();
     ?>
-        <article class="article-extrait">
+        <article class="bloc-flex-cl-ct article-extrait">
           <h3><?php the_title(); ?></h3>
-          <a href="<?php the_permalink(); ?>">
+          <a class="bloc-flex-cl-ct article-extrait" href="<?php the_permalink(); ?>">
             <?php the_content(); ?></a>
         </article>
     <?php
