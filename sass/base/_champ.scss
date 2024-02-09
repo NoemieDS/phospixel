@@ -1,0 +1,12 @@
+form {
+  max-width: 90%;
+}
+
+input {
+  color: $couleur__texte;
+  font-family: $police__texte;
+}
+
+input:focus {
+  outline-color: $couleur__titre;
+}

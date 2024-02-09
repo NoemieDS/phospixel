@@ -1,0 +1,38 @@
+@charset "UTF-8";
+/*
+Theme Name: PhōsPixel
+Theme URI: https://github.com/NoemieDS/phospixel
+Description: PhōsPixel est un thème WordPress pour la présentation de la recherche réalisée par Noémie da Silva, dans le cadre du cours Projet de fin d'études, Technique d'intégration multimédia, Collège de Maisonneuve, sous la direction de Caroline Martin, 2024.
+Author URI: https://ndasilva.ca
+Version: 1.0
+Build with : 6.4.3
+Requires PHP: 8.0
+License: GNU General Public License v2.0
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: blog, one-column, custom-background, custom-colors, custom-logo, custom-menu, editor-style, featured-images, footer-widgets, full-width-template, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready, block-styles, wide-blocks, accessibility-ready
+Text Domain: phospixel
+*/
+
+/////////////////////////////////////////////////////NORMALIZE//////////////////
+@import "normalize/normalize";
+@import "normalize/normalize_plus";
+
+///////////////////////////////////////////////////VARIABLES///////////////////
+
+@import "variables/typographie";
+@import "variables/couleurs";
+@import "variables/dimensions";
+@import "variables/heading";
+
+///////////////////////////////////////////////////BASE///////////////////
+@import "base/body";
+@import "base/liens";
+@import "base/champ";
+
+////////////////////////////////////////////////COMPOSANTS///////////////////
+@import "composants/article";
+@import "composants/entete";
+@import "composants/navigation";
+@import "composants/main";
+@import "composants/pied2page";
+@import "composants/widgets";

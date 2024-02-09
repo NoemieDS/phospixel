@@ -1,0 +1,26 @@
+.entete-barre,
+.nav-principale {
+  a {
+    color: $couleur__lien-entete;
+    text-decoration: none;
+
+    &:visited {
+      color: $couleur__lien-visite-entete;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $couleur__lien-entete-hover;
+    }
+
+    &:focus {
+      outline: thin dotted;
+    }
+
+    &:hover,
+    &:active {
+      outline: 0;
+    }
+  }
+}
