@@ -373,10 +373,10 @@ h1 {
 }
 
 h2 {
-  color: hsl(220, 95%, 50%);
+  color: hsl(220, 95%, 31%);
   font-family: "Roboto", sans-serif;
   font-size: clamp(1.6875rem, 1.6657rem + 0.0872vw, 1.875rem);
-  font-weight: 800;
+  font-weight: 500;
   margin: 1.8rem;
   text-align: center;
 }
@@ -614,9 +614,12 @@ img {
   margin: 0 2.4rem 4rem 2.4rem;
 }
 .article-extrait h2 {
+  font-weight: 500;
   line-height: 130%;
+  margin: 1.8rem;
 }
 .article-extrait h3 {
+  margin: 0;
   text-align: center;
 }
 

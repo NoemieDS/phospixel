@@ -12,10 +12,10 @@ h1 {
   text-align: center;
 }
 h2 {
-  color: $couleur__titre;
+  color: $couleur__lien;
   font-family: $police__titre;
   font-size: clamp(1.6875rem, 1.6657rem + 0.0872vw, 1.875rem);
-  font-weight: $police__titre-weight;
+  font-weight: $police__texte-weight;
   margin: $espacement_grand;
   text-align: center;
 }

@@ -16,9 +16,12 @@
   margin: 0 $espacement_xl $espacement_3xl $espacement_xl;
 
   & h2 {
+    font-weight: $police__texte-weight;
     line-height: 130%;
+    margin: $espacement_grand;
   }
   & h3 {
+    margin: 0;
     text-align: center;
   }
 }
