@@ -60,8 +60,10 @@ span {
 p,
 ul,
 li,
-figcaption {
+code,
+li > code {
   font-size: clamp(1.3rem, 1.0887rem + 0.1453vw, 1.4375rem);
+  padding-bottom: $espacement_moyen;
 
   @media screen and (min-width: $largeur__bureau) {
     font-size: clamp(1.1875rem, 1.1337rem + 0.0615vw, 1.28125rem);
@@ -73,10 +75,6 @@ li > p {
   display: inline;
 }
 
-input {
-  font-size: clamp(0.8rem, 0.125rem + 1.2vw, 1.1rem);
-}
-
 strong,
 b,
 em,
@@ -85,8 +83,40 @@ i {
 }
 
 figcaption {
-  font-size: clamp(0.7rem, 0.125rem + 1.2vw, 1.1rem);
+  font-size: clamp(1rem, 0.125rem + 1.2vw, 1.1rem);
   line-height: 130%;
-  margin: 0 2rem;
+  margin: 0 $espacement_grand $espacement_grand $espacement_grand;
   transform: translateY(-0.2rem);
+}
+
+blockquote {
+  font-size: clamp(1.3rem, 1.0887rem + 0.1453vw, 1.4375rem);
+  padding: $espacement_moyen $espacement_grand;
+}
+
+pre > code {
+  font-size: clamp(1rem, 0.125rem + 1.2vw, 1.1rem);
+}
+
+pre {
+  max-width: 300px;
+  max-height: 480px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  margin: $espacement_grand;
+
+  @media screen and (min-width: $largeur__tablette) {
+    max-width: 500px;
+    max-height: 600px;
+  }
+
+  @media screen and (min-width: $largeur__bureau) {
+    max-width: 600px;
+    max-height: 700px;
+  }
+
+  @media screen and (min-width: $largeur__bureau_large) {
+    max-width: 800px;
+    max-height: 900px;
+  }
 }

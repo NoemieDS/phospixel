@@ -349,9 +349,7 @@ a {
   padding: 0;
 }
 
-ul,
-ol,
-li {
+ul > li > a {
   list-style-type: none;
 }
 
@@ -422,25 +420,24 @@ span {
 p,
 ul,
 li,
-figcaption {
+code,
+li > code {
   font-size: clamp(1.3rem, 1.0887rem + 0.1453vw, 1.4375rem);
+  padding-bottom: 1.2rem;
   line-height: 150%;
 }
 @media screen and (min-width: 992px) {
   p,
   ul,
   li,
-  figcaption {
+  code,
+  li > code {
     font-size: clamp(1.1875rem, 1.1337rem + 0.0615vw, 1.28125rem);
   }
 }
 
 li > p {
   display: inline;
-}
-
-input {
-  font-size: clamp(0.8rem, 0.125rem + 1.2vw, 1.1rem);
 }
 
 strong,
@@ -451,10 +448,45 @@ i {
 }
 
 figcaption {
-  font-size: clamp(0.7rem, 0.125rem + 1.2vw, 1.1rem);
+  font-size: clamp(1rem, 0.125rem + 1.2vw, 1.1rem);
   line-height: 130%;
-  margin: 0 2rem;
+  margin: 0 1.8rem 1.8rem 1.8rem;
   transform: translateY(-0.2rem);
+}
+
+blockquote {
+  font-size: clamp(1.3rem, 1.0887rem + 0.1453vw, 1.4375rem);
+  padding: 1.2rem 1.8rem;
+}
+
+pre > code {
+  font-size: clamp(1rem, 0.125rem + 1.2vw, 1.1rem);
+}
+
+pre {
+  max-width: 300px;
+  max-height: 480px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  margin: 1.8rem;
+}
+@media screen and (min-width: 800px) {
+  pre {
+    max-width: 500px;
+    max-height: 600px;
+  }
+}
+@media screen and (min-width: 992px) {
+  pre {
+    max-width: 600px;
+    max-height: 700px;
+  }
+}
+@media screen and (min-width: 1800px) {
+  pre {
+    max-width: 800px;
+    max-height: 900px;
+  }
 }
 
 /* 
@@ -514,6 +546,7 @@ input:focus {
 
 img {
   max-width: 100%;
+  padding-bottom: 0.6rem;
 }
 
 .entete-barre {
@@ -587,8 +620,10 @@ img {
   margin: inherit;
 }
 
+#menu-secondaire li {
+  list-style-type: none;
+}
 #menu-secondaire a {
-  line-height: 120%;
   padding-top: 0.6rem;
 }
 

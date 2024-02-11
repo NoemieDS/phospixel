@@ -5,9 +5,13 @@
   margin: inherit;
 }
 
-#menu-secondaire a {
-  line-height: 120%;
-  padding-top: $espacement_petit;
+#menu-secondaire {
+  & li {
+    list-style-type: none;
+  }
+  & a {
+    padding-top: $espacement_petit;
+  }
 }
 
 .widget-h2-sidebar {

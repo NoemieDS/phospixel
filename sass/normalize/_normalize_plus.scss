@@ -25,8 +25,6 @@ a {
   padding: 0;
 }
 
-ul,
-ol,
-li {
+ul > li > a {
   list-style-type: none;
 }
