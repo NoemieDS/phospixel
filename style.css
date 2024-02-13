@@ -557,6 +557,10 @@ img {
 .entete-barre a {
   margin: 0.6rem;
 }
+.entete-barre ul {
+  list-style-type: none;
+  transform: translateY(1.3rem);
+}
 
 .entete-barre a,
 .nav-principale a {

@@ -6,4 +6,10 @@
   a {
     margin: $espacement_petit;
   }
+
+  & ul {
+    list-style-type: none;
+    //ajustement temporaire pour un li
+    transform: translateY(1.3rem);
+  }
 }
