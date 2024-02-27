@@ -362,7 +362,7 @@ ul > li > a {
 CSS Clam font-size generator : https://clamp.font-size.app/
 */
 h1 {
-  color: hsl(220, 95%, 50%);
+  color: hsl(220, 100%, 50%);
   font-family: "Roboto", sans-serif;
   font-size: clamp(1.3rem, -0.0385rem + 3vw, 2rem);
   font-weight: 800;
@@ -371,7 +371,7 @@ h1 {
 }
 
 h2 {
-  color: hsl(220, 95%, 31%);
+  color: hsl(220, 100%, 30%);
   font-family: "Roboto", sans-serif;
   font-size: clamp(1.6875rem, 1.6657rem + 0.0872vw, 1.875rem);
   font-weight: 500;
@@ -500,14 +500,14 @@ body {
 }
 
 a {
-  color: hsl(220, 95%, 31%);
+  color: hsl(220, 100%, 30%);
   text-decoration: none;
 }
 a:visited {
-  color: hsl(220, 95%, 31%);
+  color: hsl(220, 100%, 30%);
 }
 a:hover, a:focus, a:active {
-  color: hsl(220, 95%, 50%);
+  color: hsl(220, 100%, 50%);
 }
 a:focus {
   outline: thin dotted;
@@ -541,7 +541,7 @@ input {
 }
 
 input:focus {
-  outline-color: hsl(220, 95%, 50%);
+  outline-color: hsl(220, 100%, 50%);
 }
 
 img {
@@ -575,7 +575,7 @@ img {
 .nav-principale a:hover,
 .nav-principale a:focus,
 .nav-principale a:active {
-  color: hsl(220, 95%, 80%);
+  color: hsl(220, 100%, 80%);
 }
 .entete-barre a:focus,
 .nav-principale a:focus {
@@ -683,7 +683,7 @@ img {
 
 .heros-texte {
   border-bottom: hsl(0, 0%, 6%) 1px solid;
-  color: hsl(220, 95%, 50%);
+  color: hsl(220, 100%, 50%);
   font-size: clamp(1.7rem, -0.0385rem + 3vw, 2rem);
   line-height: 110%;
   padding: 1.8rem;
