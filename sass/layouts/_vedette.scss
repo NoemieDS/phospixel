@@ -3,7 +3,7 @@
   color: $couleur__titre;
   font-size: clamp(1.7rem, -0.0385rem + 3vw, 2rem);
   line-height: 110%;
-  padding: $espacement_grand;
+  padding: $espacement__grand;
 
   @media screen and (min-width: $largeur__tablette) {
     width: 70%;

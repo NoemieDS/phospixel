@@ -17,8 +17,8 @@ h1 {
   color: $couleur__titre;
   font-size: clamp(1.425rem, 1.146rem + 1.114vw, 2.4rem);
   font-weight: $police__titre-weight-extra;
-  margin: $espacement_petit $espacement_grand $espacement_moyen
-    $espacement_grand;
+  margin: $espacement__petit $espacement__grand $espacement__moyen
+    $espacement__grand;
   text-align: center;
 }
 
@@ -35,27 +35,27 @@ h5 {
 
 h2 {
   font-size: clamp(1.375rem, 1.139rem + 0.943vw, 2.2rem);
-  margin: $espacement_moyen;
+  margin: $espacement__moyen;
 }
 
 h3 {
   font-size: clamp(1.325rem, 1.132rem + 0.771vw, 2rem);
-  margin: $espacement_moyen;
+  margin: $espacement__moyen;
 }
 
 h4 {
   font-size: clamp(1.275rem, 1.125rem + 0.6vw, 1.8rem);
-  margin: $espacement_petit;
+  margin: $espacement__petit;
 }
 
 h5 {
   font-size: clamp(1.225rem, 1.118rem + 0.429vw, 1.6rem);
-  margin: $espacement_petit;
+  margin: $espacement__petit;
 }
 
 h6 {
   font-size: clamp(1.175rem, 1.111rem + 0.257vw, 1.4rem);
-  margin: $espacement_moyen;
+  margin: $espacement__moyen;
 }
 
 p,
@@ -73,6 +73,15 @@ time {
   font-size: clamp(1rem, 0.886rem + 0.457vw, 1.4rem);
   font-weight: $police__texte-weight;
   line-height: 150%;
+  padding-bottom: $espacement__moyen;
+}
+
+p,
+ul,
+figcaption,
+blockquote,
+time {
+  padding-bottom: $espacement__moyen;
 }
 
 li > p {
@@ -83,7 +92,7 @@ strong,
 b,
 em,
 i {
-  font-weight: 700;
+  font-weight: $police__texte-weight-bold;
 }
 
 figcaption,
@@ -91,13 +100,27 @@ cite {
   font-family: $police__texte-citation;
 }
 
+blockquote {
+  padding: $espacement__2xl;
+}
+
+/* blockquote::before {
+  content: open-quote;
+  color: $couleur__lien;
+  font-size: large;
+}
+blockquote::after {
+  content: close-quote;
+  color: $couleur__lien;
+  font-size: large;
+}
+blockquote {
+  quotes: "« " " »" "‘ " " ’";
+} */
+
 cite {
   font-size: clamp(1.1rem, 1.014rem + 0.343vw, 1.4rem);
   line-height: 135%;
-}
-
-blockquote {
-  padding: $espacement_grand;
 }
 
 figcaption,
@@ -108,7 +131,7 @@ time {
 figcaption {
   font-size: clamp(0.875rem, 0.782rem + 0.371vw, 1.2rem);
   line-height: 130%;
-  margin: 0 $espacement_grand $espacement_grand $espacement_grand;
+  margin: 0 $espacement__grand $espacement__grand $espacement__grand;
   transform: translateY(-0.2rem);
 }
 
@@ -123,28 +146,7 @@ pre > code {
 }
 
 pre {
-  /* max-width: 300px;
-  max-height: 480px;
-  overflow-y: scroll;
-  overflow-x: hidden;*/
   background-color: $couleur-gris-pale;
-  margin: $espacement_grand;
-  padding: $espacement_grand;
-
-  /*
-  @media screen and (min-width: $largeur__tablette) {
-    max-width: 500px;
-    max-height: 600px;
-  }
-
-  @media screen and (min-width: $largeur__bureau) {
-    max-width: 600px;
-    max-height: 700px;
-  }
-
-  @media screen and (min-width: $largeur__bureau_large) {
-    max-width: 800px;
-    max-height: 900px;
-  }
-  */
+  border-radius: 1%;
+  padding: $espacement__moyen;
 }

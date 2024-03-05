@@ -1,19 +1,17 @@
-// menu secondaire - widget 1 - balise aside
+/* menu secondaire - widget 1 - balise aside
+Widget du footer avec les liens vers les derniers articles*/
 #menu-secondaire .wp-block-heading {
   color: $noir;
-  text-align: inherit;
-  margin: inherit;
+  margin-left: 0;
+  text-align: left;
 }
 
 #menu-secondaire {
   & li {
     list-style-type: none;
   }
-  & a {
-    padding-top: $espacement_petit;
-  }
 }
 
 .widget-h2-sidebar {
-  padding-top: $espacement_moyen;
+  padding-top: $espacement__moyen;
 }

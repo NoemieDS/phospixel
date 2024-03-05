@@ -1,6 +1,6 @@
 .article-base {
-  margin-bottom: $espacement_grand;
-  padding: $espacement_xl;
+  margin-bottom: $espacement__grand;
+  padding: $espacement__xl;
   width: 100%;
 }
 
@@ -13,12 +13,12 @@
 
 .article-extrait {
   padding: 0;
-  margin: 0 $espacement_xl $espacement_3xl $espacement_xl;
+  margin: 0 $espacement__xl $espacement__3xl $espacement__xl;
 
   & h2 {
     font-weight: $police__texte-weight;
     line-height: 130%;
-    margin: $espacement_grand;
+    margin: $espacement__grand;
   }
   & h3 {
     margin: 0;

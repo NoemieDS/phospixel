@@ -1,15 +1,14 @@
 form {
-  max-width: 90%;
   @media screen and (min-width: $largeur__tablette) {
-    max-width: 50%;
+    max-width: 60%;
   }
 
   @media screen and (min-width: $largeur__bureau) {
-    max-width: 40%;
+    max-width: 45%;
   }
 
   @media screen and (min-width: $largeur__bureau_large) {
-    max-width: 30%;
+    max-width: 35%;
   }
 }
 
@@ -20,4 +19,9 @@ input {
 
 input:focus {
   outline-color: $couleur__titre;
+}
+
+button {
+  font-size: clamp(0.875rem, 0.782rem + 0.371vw, 1.2rem);
+  padding: $espacement__xpetit;
 }

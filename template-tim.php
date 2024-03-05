@@ -20,7 +20,7 @@ $tim_posts_query  = new WP_Query($args);
 get_header();
 ?>
 
-<main class="site-main bloc-flex-cl-ct">
+<main class="wrapper site-main bloc-flex-cl-ct">
 
   <article id="post-<?php the_ID(); ?>" <?php post_class('article-base'); ?>>
     <?php

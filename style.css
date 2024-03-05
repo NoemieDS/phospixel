@@ -441,6 +441,15 @@ time {
   font-size: clamp(1rem, 0.886rem + 0.457vw, 1.4rem);
   font-weight: 500;
   line-height: 150%;
+  padding-bottom: clamp(1rem, 0.943rem + 0.229vw, 1.2rem);
+}
+
+p,
+ul,
+figcaption,
+blockquote,
+time {
+  padding-bottom: clamp(1rem, 0.943rem + 0.229vw, 1.2rem);
 }
 
 li > p {
@@ -451,7 +460,7 @@ strong,
 b,
 em,
 i {
-  font-weight: 700;
+  font-weight: 600;
 }
 
 figcaption,
@@ -459,13 +468,26 @@ cite {
   font-family: "Roboto Slab", serif;
 }
 
+blockquote {
+  padding: clamp(3rem, 2.886rem + 0.457vw, 3.4rem);
+}
+
+/* blockquote::before {
+  content: open-quote;
+  color: $couleur__lien;
+  font-size: large;
+}
+blockquote::after {
+  content: close-quote;
+  color: $couleur__lien;
+  font-size: large;
+}
+blockquote {
+  quotes: "« " " »" "‘ " " ’";
+} */
 cite {
   font-size: clamp(1.1rem, 1.014rem + 0.343vw, 1.4rem);
   line-height: 135%;
-}
-
-blockquote {
-  padding: clamp(1.4rem, 1.286rem + 0.457vw, 1.8rem);
 }
 
 figcaption,
@@ -491,29 +513,9 @@ pre > code {
 }
 
 pre {
-  /* max-width: 300px;
-  max-height: 480px;
-  overflow-y: scroll;
-  overflow-x: hidden;*/
-  background-color: hsl(220, 5%, 70%);
-  margin: clamp(1.4rem, 1.286rem + 0.457vw, 1.8rem);
-  padding: clamp(1.4rem, 1.286rem + 0.457vw, 1.8rem);
-  /*
-  @media screen and (min-width: $largeur__tablette) {
-    max-width: 500px;
-    max-height: 600px;
-  }
-
-  @media screen and (min-width: $largeur__bureau) {
-    max-width: 600px;
-    max-height: 700px;
-  }
-
-  @media screen and (min-width: $largeur__bureau_large) {
-    max-width: 800px;
-    max-height: 900px;
-  }
-  */
+  background-color: hsl(220, 20%, 80%);
+  border-radius: 1%;
+  padding: clamp(1rem, 0.943rem + 0.229vw, 1.2rem);
 }
 
 /* 
@@ -530,8 +532,8 @@ body {
   width: clamp(16rem, 90vw, 70rem);
   margin-left: auto;
   margin-right: auto;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 a {
@@ -551,22 +553,19 @@ a:hover, a:active {
   outline: 0;
 }
 
-form {
-  max-width: 90%;
-}
 @media screen and (min-width: 800px) {
   form {
-    max-width: 50%;
+    max-width: 60%;
   }
 }
 @media screen and (min-width: 992px) {
   form {
-    max-width: 40%;
+    max-width: 45%;
   }
 }
 @media screen and (min-width: 1800px) {
   form {
-    max-width: 30%;
+    max-width: 35%;
   }
 }
 
@@ -577,6 +576,11 @@ input {
 
 input:focus {
   outline-color: hsl(220, 100%, 50%);
+}
+
+button {
+  font-size: clamp(0.875rem, 0.782rem + 0.371vw, 1.2rem);
+  padding: clamp(0.7rem, 0.657rem + 0.216vw, 0.9rem);
 }
 
 img {
@@ -600,6 +604,7 @@ img {
 .entete-barre a,
 .nav-principale a {
   color: hsl(220, 5%, 98%);
+  font-weight: 600;
   text-decoration: none;
 }
 .entete-barre a:visited,
@@ -624,13 +629,6 @@ img {
 
 .site-main {
   min-height: 60vh;
-  /* wrapper */
-  width: clamp(16rem, 90vw, 70rem);
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-  /* fin wrapper */
 }
 
 .site-main-404 {
@@ -639,7 +637,7 @@ img {
 
 .site-footer {
   padding-bottom: clamp(1rem, 0.943rem + 0.229vw, 1.2rem);
-  margin: clamp(2rem, 1.886rem + 0.457vw, 2.4rem) 0;
+  margin: clamp(4rem, 3.886rem + 0.457vw, 4.4rem) 0 clamp(2rem, 1.886rem + 0.457vw, 2.4rem) 0;
   padding: 0 clamp(2rem, 1.886rem + 0.457vw, 2.4rem);
   width: 100%;
 }
@@ -658,17 +656,16 @@ img {
   line-height: 100%;
 }
 
+/* menu secondaire - widget 1 - balise aside
+Widget du footer avec les liens vers les derniers articles*/
 #menu-secondaire .wp-block-heading {
   color: hsl(220, 5%, 4%);
-  text-align: inherit;
-  margin: inherit;
+  margin-left: 0;
+  text-align: left;
 }
 
 #menu-secondaire li {
   list-style-type: none;
-}
-#menu-secondaire a {
-  padding-top: clamp(0.8rem, 0.743rem + 0.229vw, 1rem);
 }
 
 .widget-h2-sidebar {

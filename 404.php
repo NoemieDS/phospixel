@@ -11,7 +11,7 @@
 get_header();
 ?>
 
-<main class="site-main site-main-404">
+<main class="wrapper site-main site-main-404">
 
   <section>
     <h2><?php esc_html_e('Oups ! '); ?></h2>

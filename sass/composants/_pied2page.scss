@@ -1,7 +1,7 @@
 .site-footer {
-  padding-bottom: $espacement_moyen;
-  margin: $espacement_xl 0;
-  padding: 0 $espacement_xl;
+  padding-bottom: $espacement__moyen;
+  margin: $espacement__3xl 0 $espacement__xl 0;
+  padding: 0 $espacement__xl;
   width: 100%;
 }
 
@@ -9,7 +9,7 @@
   flex-wrap: wrap;
   font-family: $police__texte;
   font-weight: $police__texte-weight;
-  margin-top: $espacement_grand;
+  margin-top: $espacement__grand;
 
   & .site-date,
   a,

@@ -1,10 +1,10 @@
 .entete-barre {
   background-color: $noir;
-  padding: $espacement_petit $espacement_moyen;
+  padding: $espacement__petit $espacement__moyen;
 
   & h1,
   a {
-    margin: $espacement_petit;
+    margin: $espacement__petit;
   }
 
   & ul {
