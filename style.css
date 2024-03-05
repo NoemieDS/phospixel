@@ -353,6 +353,16 @@ ul > li > a {
   list-style-type: none;
 }
 
+/*
+$police__lien: "Roboto", sans-serif;
+$police__lien-weight: 500;
+*/
+/* Les deux teintes principales */
+/************** Couleurs des titres ***************/
+/* H2, H4, H6 : $noir */
+/* H3, H5 : $couleur__lien */
+/************** Couleurs des liens ***************/
+/* Couleurs liens entête */
 /* 
 ** Tout ce qui concerne des dimensions
 */
@@ -361,79 +371,76 @@ ul > li > a {
 /*
 CSS Clam font-size generator : https://clamp.font-size.app/
 */
-h1 {
-  color: hsl(220, 100%, 50%);
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: "Roboto", sans-serif;
-  font-size: clamp(1.3rem, -0.0385rem + 3vw, 2rem);
-  font-weight: 800;
-  margin: 0.6rem 1.8rem 1.2rem 1.8rem;
+  font-weight: 700;
   text-align: center;
 }
 
-h2 {
-  color: hsl(220, 100%, 30%);
-  font-family: "Roboto", sans-serif;
-  font-size: clamp(1.6875rem, 1.6657rem + 0.0872vw, 1.875rem);
-  font-weight: 500;
-  margin: 1.8rem;
+h1 {
+  color: hsl(220, 100%, 50%);
+  font-size: clamp(1.425rem, 1.146rem + 1.114vw, 2.4rem);
+  font-weight: 800;
+  margin: clamp(0.8rem, 0.743rem + 0.229vw, 1rem) clamp(1.4rem, 1.286rem + 0.457vw, 1.8rem) clamp(1rem, 0.943rem + 0.229vw, 1.2rem) clamp(1.4rem, 1.286rem + 0.457vw, 1.8rem);
   text-align: center;
+}
+
+h2,
+h4,
+h6 {
+  color: hsl(220, 5%, 4%);
 }
 
 h3,
-h3 > a {
-  font-family: "Roboto", sans-serif;
-  font-size: clamp(1.375rem, 1.3591rem + 0.0847vw, 1.5625rem);
-  font-weight: 400;
-  margin: 1.2rem;
+h5 {
+  color: hsl(220, 100%, 30%);
+}
+
+h2 {
+  font-size: clamp(1.375rem, 1.139rem + 0.943vw, 2.2rem);
+  margin: clamp(1rem, 0.943rem + 0.229vw, 1.2rem);
+}
+
+h3 {
+  font-size: clamp(1.325rem, 1.132rem + 0.771vw, 2rem);
+  margin: clamp(1rem, 0.943rem + 0.229vw, 1.2rem);
 }
 
 h4 {
-  font-family: "Roboto", sans-serif;
-  font-size: clamp(1.34375rem, 1.3252rem + 0.0989vw, 1.5625rem);
-  font-weight: 800;
+  font-size: clamp(1.275rem, 1.125rem + 0.6vw, 1.8rem);
+  margin: clamp(0.8rem, 0.743rem + 0.229vw, 1rem);
 }
 
 h5 {
-  font-family: "Roboto", sans-serif;
-  font-size: clamp(1.3125rem, 1.2913rem + 0.113vw, 1.5625rem);
-  font-weight: 800;
+  font-size: clamp(1.225rem, 1.118rem + 0.429vw, 1.6rem);
+  margin: clamp(0.8rem, 0.743rem + 0.229vw, 1rem);
 }
 
 h6 {
-  font-family: "Roboto", sans-serif;
-  font-size: clamp(1.15625rem, 1.1218rem + 0.1836vw, 1.5625rem);
-  font-weight: 800;
+  font-size: clamp(1.175rem, 1.111rem + 0.257vw, 1.4rem);
+  margin: clamp(1rem, 0.943rem + 0.229vw, 1.2rem);
 }
 
 p,
 ul,
 li,
-figcaption,
 button,
 a,
-span {
+span,
+figcaption,
+cite,
+blockquote,
+time {
+  color: hsl(220, 5%, 4%);
   font-family: "Roboto", sans-serif;
+  font-size: clamp(1rem, 0.886rem + 0.457vw, 1.4rem);
   font-weight: 500;
   line-height: 150%;
-}
-
-p,
-ul,
-li,
-code,
-li > code {
-  font-size: clamp(1.3rem, 1.0887rem + 0.1453vw, 1.4375rem);
-  padding-bottom: 1.2rem;
-  line-height: 150%;
-}
-@media screen and (min-width: 992px) {
-  p,
-  ul,
-  li,
-  code,
-  li > code {
-    font-size: clamp(1.1875rem, 1.1337rem + 0.0615vw, 1.28125rem);
-  }
 }
 
 li > p {
@@ -444,49 +451,69 @@ strong,
 b,
 em,
 i {
-  font-weight: bold;
+  font-weight: 700;
 }
 
-figcaption {
-  font-size: clamp(1rem, 0.125rem + 1.2vw, 1.1rem);
-  line-height: 130%;
-  margin: 0 1.8rem 1.8rem 1.8rem;
-  transform: translateY(-0.2rem);
+figcaption,
+cite {
+  font-family: "Roboto Slab", serif;
+}
+
+cite {
+  font-size: clamp(1.1rem, 1.014rem + 0.343vw, 1.4rem);
+  line-height: 135%;
 }
 
 blockquote {
-  font-size: clamp(1.3rem, 1.0887rem + 0.1453vw, 1.4375rem);
-  padding: 1.2rem 1.8rem;
+  padding: clamp(1.4rem, 1.286rem + 0.457vw, 1.8rem);
+}
+
+figcaption,
+time {
+  font-size: clamp(0.875rem, 0.782rem + 0.371vw, 1.2rem);
+}
+
+figcaption {
+  font-size: clamp(0.875rem, 0.782rem + 0.371vw, 1.2rem);
+  line-height: 130%;
+  margin: 0 clamp(1.4rem, 1.286rem + 0.457vw, 1.8rem) clamp(1.4rem, 1.286rem + 0.457vw, 1.8rem) clamp(1.4rem, 1.286rem + 0.457vw, 1.8rem);
+  transform: translateY(-0.2rem);
+}
+
+code,
+li > code {
+  font-family: "Roboto Mono", monospace;
+  line-height: 150%;
 }
 
 pre > code {
-  font-size: clamp(1rem, 0.125rem + 1.2vw, 1.1rem);
+  font-size: clamp(0.975rem, 0.968rem + 0.029vw, 1rem);
 }
 
 pre {
-  max-width: 300px;
+  /* max-width: 300px;
   max-height: 480px;
   overflow-y: scroll;
-  overflow-x: hidden;
-  margin: 1.8rem;
-}
-@media screen and (min-width: 800px) {
-  pre {
+  overflow-x: hidden;*/
+  background-color: hsl(220, 5%, 70%);
+  margin: clamp(1.4rem, 1.286rem + 0.457vw, 1.8rem);
+  padding: clamp(1.4rem, 1.286rem + 0.457vw, 1.8rem);
+  /*
+  @media screen and (min-width: $largeur__tablette) {
     max-width: 500px;
     max-height: 600px;
   }
-}
-@media screen and (min-width: 992px) {
-  pre {
+
+  @media screen and (min-width: $largeur__bureau) {
     max-width: 600px;
     max-height: 700px;
   }
-}
-@media screen and (min-width: 1800px) {
-  pre {
+
+  @media screen and (min-width: $largeur__bureau_large) {
     max-width: 800px;
     max-height: 900px;
   }
+  */
 }
 
 /* 
@@ -497,6 +524,14 @@ body {
   height: 100%;
   max-width: 100%;
   width: 100vw;
+}
+
+.wrapper {
+  width: clamp(16rem, 90vw, 70rem);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }
 
 a {
@@ -536,7 +571,7 @@ form {
 }
 
 input {
-  color: hsl(0, 0%, 6%);
+  color: hsl(220, 5%, 4%);
   font-family: "Roboto", sans-serif;
 }
 
@@ -546,16 +581,16 @@ input:focus {
 
 img {
   max-width: 100%;
-  padding-bottom: 0.6rem;
+  padding-bottom: clamp(0.8rem, 0.743rem + 0.229vw, 1rem);
 }
 
 .entete-barre {
-  background-color: hsl(0, 0%, 6%);
-  padding: 0.6rem 1.2rem;
+  background-color: hsl(220, 5%, 4%);
+  padding: clamp(0.8rem, 0.743rem + 0.229vw, 1rem) clamp(1rem, 0.943rem + 0.229vw, 1.2rem);
 }
 .entete-barre h1,
 .entete-barre a {
-  margin: 0.6rem;
+  margin: clamp(0.8rem, 0.743rem + 0.229vw, 1rem);
 }
 .entete-barre ul {
   list-style-type: none;
@@ -564,12 +599,12 @@ img {
 
 .entete-barre a,
 .nav-principale a {
-  color: hsl(0, 0%, 94%);
+  color: hsl(220, 5%, 98%);
   text-decoration: none;
 }
 .entete-barre a:visited,
 .nav-principale a:visited {
-  color: hsl(0, 0%, 94%);
+  color: hsl(220, 5%, 98%);
 }
 .entete-barre a:hover, .entete-barre a:focus, .entete-barre a:active,
 .nav-principale a:hover,
@@ -589,8 +624,13 @@ img {
 
 .site-main {
   min-height: 60vh;
-  margin-bottom: 2.4rem;
-  width: 100%;
+  /* wrapper */
+  width: clamp(16rem, 90vw, 70rem);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  /* fin wrapper */
 }
 
 .site-main-404 {
@@ -598,9 +638,9 @@ img {
 }
 
 .site-footer {
-  padding-bottom: 1.2rem;
-  margin: 2.4rem 0;
-  padding: 0 2.4rem;
+  padding-bottom: clamp(1rem, 0.943rem + 0.229vw, 1.2rem);
+  margin: clamp(2rem, 1.886rem + 0.457vw, 2.4rem) 0;
+  padding: 0 clamp(2rem, 1.886rem + 0.457vw, 2.4rem);
   width: 100%;
 }
 
@@ -608,18 +648,18 @@ img {
   flex-wrap: wrap;
   font-family: "Roboto", sans-serif;
   font-weight: 500;
-  margin-top: 1.8rem;
+  margin-top: clamp(1.4rem, 1.286rem + 0.457vw, 1.8rem);
 }
 .site-info .site-date,
 .site-info a,
 .site-info p {
-  color: hsl(0, 0%, 6%);
+  color: hsl(220, 5%, 4%);
   font-size: clamp(0.8rem, 1.0887rem + 0.1453vw, 1.4375rem);
   line-height: 100%;
 }
 
 #menu-secondaire .wp-block-heading {
-  color: hsl(0, 0%, 6%);
+  color: hsl(220, 5%, 4%);
   text-align: inherit;
   margin: inherit;
 }
@@ -628,16 +668,16 @@ img {
   list-style-type: none;
 }
 #menu-secondaire a {
-  padding-top: 0.6rem;
+  padding-top: clamp(0.8rem, 0.743rem + 0.229vw, 1rem);
 }
 
 .widget-h2-sidebar {
-  padding-top: 1.2rem;
+  padding-top: clamp(1rem, 0.943rem + 0.229vw, 1.2rem);
 }
 
 .article-base {
-  margin-bottom: 1.8rem;
-  padding: 2.4rem;
+  margin-bottom: clamp(1.4rem, 1.286rem + 0.457vw, 1.8rem);
+  padding: clamp(2rem, 1.886rem + 0.457vw, 2.4rem);
   width: 100%;
 }
 
@@ -650,12 +690,12 @@ img {
 
 .article-extrait {
   padding: 0;
-  margin: 0 2.4rem 4rem 2.4rem;
+  margin: 0 clamp(2rem, 1.886rem + 0.457vw, 2.4rem) clamp(4rem, 3.886rem + 0.457vw, 4.4rem) clamp(2rem, 1.886rem + 0.457vw, 2.4rem);
 }
 .article-extrait h2 {
   font-weight: 500;
   line-height: 130%;
-  margin: 1.8rem;
+  margin: clamp(1.4rem, 1.286rem + 0.457vw, 1.8rem);
 }
 .article-extrait h3 {
   margin: 0;
@@ -682,11 +722,11 @@ img {
 }
 
 .heros-texte {
-  border-bottom: hsl(0, 0%, 6%) 1px solid;
+  border-bottom: hsl(220, 5%, 4%) 1px solid;
   color: hsl(220, 100%, 50%);
   font-size: clamp(1.7rem, -0.0385rem + 3vw, 2rem);
   line-height: 110%;
-  padding: 1.8rem;
+  padding: clamp(1.4rem, 1.286rem + 0.457vw, 1.8rem);
 }
 @media screen and (min-width: 800px) {
   .heros-texte {

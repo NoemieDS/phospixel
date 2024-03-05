@@ -14,6 +14,22 @@ if (!defined('_S_VERSION')) {
 }
 
 /**
+ * Enqueue scripts et styles.
+ */
+function phospixel_styles()
+{
+	wp_enqueue_style('phospixel-style', get_stylesheet_uri(), array(), _S_VERSION);
+	wp_style_add_data('phospixel-style', 'rtl', 'replace');
+
+	wp_enqueue_script('phospixel-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true);
+
+	/* Intégration des polices de Google */
+	wp_enqueue_style('style-goolefont', 'href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"', false);
+}
+add_action('wp_enqueue_scripts', 'phospixel_styles');
+
+
+/**
  * Configure les paramètres par défaut du thème et enregistre le support pour diverses fonctionnalités de WordPress.
  */
 function phospixel_setup()
@@ -111,17 +127,4 @@ function phospixel_widgets_init()
 }
 add_action('widgets_init', 'phospixel_widgets_init');
 
-/**
- * Enqueue scripts et styles.
- */
-function phospixel_styles()
-{
-	wp_enqueue_style('phospixel-style', get_stylesheet_uri(), array(), _S_VERSION);
-	wp_style_add_data('phospixel-style', 'rtl', 'replace');
 
-	wp_enqueue_script('phospixel-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true);
-
-	/* Intégration des polices de Google */
-	wp_enqueue_style('style-goolefont', 'https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;800&display=swap" rel="stylesheet', false);
-}
-add_action('wp_enqueue_scripts', 'phospixel_styles');

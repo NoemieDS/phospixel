@@ -8,9 +8,9 @@ $largeur__bureau: 992px;
 $largeur__bureau_large: 1800px;
 
 /* Espacements */
-$espacement_petit: 0.6rem;
-$espacement_moyen: 1.2rem;
-$espacement_grand: 1.8rem;
-$espacement_xl: 2.4rem;
-$espacement_2xl: 3rem;
-$espacement_3xl: 4rem;
+$espacement_petit: clamp(0.8rem, 0.743rem + 0.229vw, 1rem);
+$espacement_moyen: clamp(1rem, 0.943rem + 0.229vw, 1.2rem);
+$espacement_grand: clamp(1.4rem, 1.286rem + 0.457vw, 1.8rem);
+$espacement_xl: clamp(2rem, 1.886rem + 0.457vw, 2.4rem);
+$espacement_2xl: clamp(3rem, 2.886rem + 0.457vw, 3.4rem);
+$espacement_3xl: clamp(4rem, 3.886rem + 0.457vw, 4.4rem);

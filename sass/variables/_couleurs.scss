@@ -1,13 +1,26 @@
 $couleur__test: hsl(132, 96%, 51%);
 
-$couleur__texte: hsl(0, 0%, 6%);
-$couleur__titre: hsl(220, 100%, 50%);
+/* Les deux teintes principales */
+$teinte-1: 220deg; // Bleu
+$teinte-2: 342deg; //Rose
 
-$couleur__lien: hsl(220, 100%, 30%);
-$couleur__lien-visite: hsl(220, 100%, 30%);
-$couleur__lien-hover: hsl(220, 100%, 50%);
+$noir: hsl($teinte-1, 5%, 4%);
+$blanc: hsl($teinte-1, 5%, 98%);
+$couleur-gris-pale: hsl($teinte-1, 5%, 70%);
 
-$couleur__background-entete: hsl(0, 0%, 6%);
-$couleur__lien-entete: hsl(0, 0%, 94%);
-$couleur__lien-visite-entete: hsl(0, 0%, 94%);
-$couleur__lien-entete-hover: hsl(220, 100%, 80%);
+/************** Couleurs des titres ***************/
+$couleur__titre: hsl($teinte-1, 100%, 50%); // H1
+
+/* H2, H4, H6 : $noir */
+/* H3, H5 : $couleur__lien */
+
+/************** Couleurs des liens ***************/
+
+$couleur__lien: hsl($teinte-1, 100%, 30%);
+$couleur__lien-visite: hsl($teinte-1, 100%, 30%);
+$couleur__lien-hover: hsl($teinte-1, 100%, 50%);
+
+/* Couleurs liens entête */
+$couleur__lien-entete: $blanc;
+$couleur__lien-visite-entete: $blanc;
+$couleur__lien-entete-hover: hsl($teinte-1, 100%, 80%);

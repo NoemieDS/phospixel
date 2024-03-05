@@ -2,72 +2,76 @@
 CSS Clam font-size generator : https://clamp.font-size.app/
 */
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $police__titre;
+  font-weight: $police__titre-weight;
+  text-align: center;
+}
+
 h1 {
   color: $couleur__titre;
-  font-family: $police__titre;
-  font-size: clamp(1.3rem, -0.0385rem + 3vw, 2rem);
-  font-weight: $police__titre-weight;
+  font-size: clamp(1.425rem, 1.146rem + 1.114vw, 2.4rem);
+  font-weight: $police__titre-weight-extra;
   margin: $espacement_petit $espacement_grand $espacement_moyen
     $espacement_grand;
   text-align: center;
 }
-h2 {
-  color: $couleur__lien;
-  font-family: $police__titre;
-  font-size: clamp(1.6875rem, 1.6657rem + 0.0872vw, 1.875rem);
-  font-weight: $police__texte-weight;
-  margin: $espacement_grand;
-  text-align: center;
+
+h2,
+h4,
+h6 {
+  color: $noir;
 }
 
 h3,
-h3 > a {
-  font-family: $police__titre;
-  font-size: clamp(1.375rem, 1.3591rem + 0.0847vw, 1.5625rem);
-  font-weight: $police__titre-weight-leger;
+h5 {
+  color: $couleur__lien;
+}
+
+h2 {
+  font-size: clamp(1.375rem, 1.139rem + 0.943vw, 2.2rem);
+  margin: $espacement_moyen;
+}
+
+h3 {
+  font-size: clamp(1.325rem, 1.132rem + 0.771vw, 2rem);
   margin: $espacement_moyen;
 }
 
 h4 {
-  font-family: $police__titre;
-  font-size: clamp(1.34375rem, 1.3252rem + 0.0989vw, 1.5625rem);
-  font-weight: $police__titre-weight;
+  font-size: clamp(1.275rem, 1.125rem + 0.6vw, 1.8rem);
+  margin: $espacement_petit;
 }
 
 h5 {
-  font-family: $police__titre;
-  font-size: clamp(1.3125rem, 1.2913rem + 0.113vw, 1.5625rem);
-  font-weight: $police__titre-weight;
+  font-size: clamp(1.225rem, 1.118rem + 0.429vw, 1.6rem);
+  margin: $espacement_petit;
 }
+
 h6 {
-  font-family: $police__titre;
-  font-size: clamp(1.15625rem, 1.1218rem + 0.1836vw, 1.5625rem);
-  font-weight: $police__titre-weight;
+  font-size: clamp(1.175rem, 1.111rem + 0.257vw, 1.4rem);
+  margin: $espacement_moyen;
 }
 
 p,
 ul,
 li,
-figcaption,
 button,
 a,
-span {
+span,
+figcaption,
+cite,
+blockquote,
+time {
+  color: $noir;
   font-family: $police__texte;
+  font-size: clamp(1rem, 0.886rem + 0.457vw, 1.4rem);
   font-weight: $police__texte-weight;
-  line-height: 150%;
-}
-
-p,
-ul,
-li,
-code,
-li > code {
-  font-size: clamp(1.3rem, 1.0887rem + 0.1453vw, 1.4375rem);
-  padding-bottom: $espacement_moyen;
-
-  @media screen and (min-width: $largeur__bureau) {
-    font-size: clamp(1.1875rem, 1.1337rem + 0.0615vw, 1.28125rem);
-  }
   line-height: 150%;
 }
 
@@ -79,32 +83,55 @@ strong,
 b,
 em,
 i {
-  font-weight: bold;
+  font-weight: 700;
+}
+
+figcaption,
+cite {
+  font-family: $police__texte-citation;
+}
+
+cite {
+  font-size: clamp(1.1rem, 1.014rem + 0.343vw, 1.4rem);
+  line-height: 135%;
+}
+
+blockquote {
+  padding: $espacement_grand;
+}
+
+figcaption,
+time {
+  font-size: clamp(0.875rem, 0.782rem + 0.371vw, 1.2rem);
 }
 
 figcaption {
-  font-size: clamp(1rem, 0.125rem + 1.2vw, 1.1rem);
+  font-size: clamp(0.875rem, 0.782rem + 0.371vw, 1.2rem);
   line-height: 130%;
   margin: 0 $espacement_grand $espacement_grand $espacement_grand;
   transform: translateY(-0.2rem);
 }
 
-blockquote {
-  font-size: clamp(1.3rem, 1.0887rem + 0.1453vw, 1.4375rem);
-  padding: $espacement_moyen $espacement_grand;
+code,
+li > code {
+  font-family: $police__texte-code;
+  line-height: 150%;
 }
 
 pre > code {
-  font-size: clamp(1rem, 0.125rem + 1.2vw, 1.1rem);
+  font-size: clamp(0.975rem, 0.968rem + 0.029vw, 1rem);
 }
 
 pre {
-  max-width: 300px;
+  /* max-width: 300px;
   max-height: 480px;
   overflow-y: scroll;
-  overflow-x: hidden;
+  overflow-x: hidden;*/
+  background-color: $couleur-gris-pale;
   margin: $espacement_grand;
+  padding: $espacement_grand;
 
+  /*
   @media screen and (min-width: $largeur__tablette) {
     max-width: 500px;
     max-height: 600px;
@@ -119,4 +146,5 @@ pre {
     max-width: 800px;
     max-height: 900px;
   }
+  */
 }
