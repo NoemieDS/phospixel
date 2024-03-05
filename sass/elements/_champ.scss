@@ -12,6 +12,16 @@ form {
   }
 }
 
+/* Ne fonctionne pas bien
+.recherche {
+  // width: clamp(16rem, 88vw, 22rem);
+}
+*/
+
+form {
+  margin-bottom: $espacement__xl;
+}
+
 input {
   color: $noir;
   font-family: $police__texte;

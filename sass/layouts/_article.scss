@@ -25,3 +25,10 @@
     text-align: center;
   }
 }
+
+/* Classe pour la balise article d'une page (template-parts content.php) */
+.article-page {
+  & svg {
+    margin-bottom: $espacement__2xl;
+  }
+}

@@ -2,16 +2,15 @@
 Widget du footer avec les liens vers les derniers articles*/
 #menu-secondaire .wp-block-heading {
   color: $noir;
+  margin-bottom: 0.1rem;
   margin-left: 0;
+  padding-top: $espacement__moyen;
   text-align: left;
 }
 
 #menu-secondaire {
   & li {
     list-style-type: none;
+    padding-bottom: $espacement__petit;
   }
-}
-
-.widget-h2-sidebar {
-  padding-top: $espacement__moyen;
 }

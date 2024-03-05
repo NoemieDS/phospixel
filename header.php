@@ -22,10 +22,9 @@
 </head>
 
 <body <?php body_class(); ?>> <!-- ajoute des classes et des infos personnalisées en fonction de la page affichée  -->
-	<?php wp_body_open(); ?> <!-- barre admin de WP -->
 
 	<header class="entete-barre bloc-flex-rw-ct">
-		<div>
+		<div class="wrapper-entete-pied bloc-flex-rw-ct">
 			<?php
 			the_custom_logo();
 			?>
@@ -34,22 +33,23 @@
 			$phospixel_description = get_bloginfo('description', 'display');
 			if ($phospixel_description || is_customize_preview()) :
 			?>
-				<p class="site-description"><?php echo $phospixel_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped 
+				<p class="site-description"><?php echo $phospixel_description;
 																		?></p>
 			<?php endif; ?>
+
+
+
+			<!-- Navigation principale (nav) -->
+			<?php
+			wp_nav_menu(
+				array(
+					'theme_location' => 'entete',
+					'container_class' =>  'nav-principale',
+					'menu_id'        => 'nav-principale',
+					'container' => 'nav',
+				)
+			);
+			?>
+			<!-- #Navigation principale -->
 		</div>
-
-
-		<!-- Navigation principale (nav) -->
-		<?php
-		wp_nav_menu(
-			array(
-				'theme_location' => 'entete',
-				'container_class' =>  'nav-principale',
-				'menu_id'        => 'nav-principale',
-				'container' => 'nav',
-			)
-		);
-		?>
-		<!-- #Navigation principale -->
 	</header>

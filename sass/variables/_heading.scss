@@ -17,8 +17,7 @@ h1 {
   color: $couleur__titre;
   font-size: clamp(1.425rem, 1.146rem + 1.114vw, 2.4rem);
   font-weight: $police__titre-weight-extra;
-  margin: $espacement__petit $espacement__grand $espacement__moyen
-    $espacement__grand;
+  margin: $espacement__xl $espacement__moyen;
   text-align: center;
 }
 
@@ -35,22 +34,22 @@ h5 {
 
 h2 {
   font-size: clamp(1.375rem, 1.139rem + 0.943vw, 2.2rem);
-  margin: $espacement__moyen;
+  margin: $espacement__grand;
 }
 
 h3 {
   font-size: clamp(1.325rem, 1.132rem + 0.771vw, 2rem);
-  margin: $espacement__moyen;
+  margin: $espacement__grand;
 }
 
 h4 {
   font-size: clamp(1.275rem, 1.125rem + 0.6vw, 1.8rem);
-  margin: $espacement__petit;
+  margin: $espacement__moyen;
 }
 
 h5 {
   font-size: clamp(1.225rem, 1.118rem + 0.429vw, 1.6rem);
-  margin: $espacement__petit;
+  margin: $espacement__moyen;
 }
 
 h6 {
@@ -70,14 +69,15 @@ blockquote,
 time {
   color: $noir;
   font-family: $police__texte;
-  font-size: clamp(1rem, 0.886rem + 0.457vw, 1.4rem);
+  font-size: clamp(1rem, 0.914rem + 0.432vw, 1.4rem);
   font-weight: $police__texte-weight;
-  line-height: 150%;
-  padding-bottom: $espacement__moyen;
+  line-height: 160%;
 }
 
 p,
 ul,
+li,
+cite,
 figcaption,
 blockquote,
 time {
@@ -100,8 +100,12 @@ cite {
   font-family: $police__texte-citation;
 }
 
+cite {
+  color: $couleur__lien;
+}
+
 blockquote {
-  padding: $espacement__2xl;
+  padding: $espacement__grand;
 }
 
 /* blockquote::before {
@@ -125,11 +129,10 @@ cite {
 
 figcaption,
 time {
-  font-size: clamp(0.875rem, 0.782rem + 0.371vw, 1.2rem);
+  font-size: clamp(0.7rem, 0.782rem + 0.371vw, 1.2rem);
 }
 
 figcaption {
-  font-size: clamp(0.875rem, 0.782rem + 0.371vw, 1.2rem);
   line-height: 130%;
   margin: 0 $espacement__grand $espacement__grand $espacement__grand;
   transform: translateY(-0.2rem);
@@ -148,5 +151,6 @@ pre > code {
 pre {
   background-color: $couleur-gris-pale;
   border-radius: 1%;
+  margin-bottom: $espacement__grand;
   padding: $espacement__moyen;
 }

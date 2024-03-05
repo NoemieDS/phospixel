@@ -13,6 +13,6 @@ if (!is_active_sidebar('sidebar-1')) {
 }
 ?>
 
-<aside id="menu-secondaire" class="widget-menu-secondaire">
+<aside id="menu-secondaire" class="widget-menu-secondaire wrapper-entete-pied">
 	<?php dynamic_sidebar('sidebar-1'); ?>
 </aside>

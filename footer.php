@@ -8,11 +8,11 @@
  */
 
 ?>
-<footer class="site-footer bloc-flex-cl">
+<footer class="site-footer bloc-flex-cl wrapper-entete-pied">
   <?php
   get_sidebar();
   ?>
-  <section class="site-info bloc-flex-rw-ct">
+  <section class="site-info bloc-flex-rw-ct wrapper-entete-pied ">
     <p class="site-date">© <?= date("Y") ?> </p>
     <a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a>
     <a href="http://ndasilva.ca">Noémie da Silva</a>
