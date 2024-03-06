@@ -535,6 +535,10 @@ img {
 ** Tout ce qui concerne la balise body
 ** 
 */
+/* 
+* Le fond se met dans le tableau de bord de WP, 
+* support svg ajouté dans functions.php 
+*/
 body {
   height: 100%;
   max-width: 100%;

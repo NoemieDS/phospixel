@@ -23,6 +23,7 @@ function phospixel_styles()
 
 	wp_enqueue_script('phospixel-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true);
 
+
 	/* Intégration des polices de Google */
 	wp_enqueue_style('style-goolefont', 'href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"', false);
 }
@@ -60,6 +61,54 @@ function phospixel_setup()
 	}
 	add_action('init', 'enregistrement_nav_menu', 0);
 
+	/*
+	* Ajouter du support pour les SVG et le XML, 
+	* permet de mettre des SVG dans la librairie et de les utiliser comme 
+	* image de mise en avant et comme background-image
+	*
+	* https://wpengine.com/resources/enable-svg-wordpress/
+	*/
+
+	add_filter('wp_check_filetype_and_ext', function ($data, $file, $filename, $mimes) {
+
+		global $wp_version;
+		if ($wp_version !== '4.7.1') {
+			return $data;
+		}
+
+		$filetype = wp_check_filetype($filename, $mimes);
+
+		return [
+			'ext'             => $filetype['ext'],
+			'type'            => $filetype['type'],
+			'proper_filename' => $data['proper_filename']
+		];
+	}, 10, 4);
+
+	function cc_mime_types($mimes)
+	{
+		$mimes['svg'] = 'image/svg+xml';
+		return $mimes;
+	}
+	add_filter('upload_mimes', 'cc_mime_types');
+
+	/*Pour voir une vignette dans la bibliothèque des média
+	* code original indiquait .attachment-266x266 - fonctionne pas
+	* Ne permet pas de voir une vignette d'image de mise en avant dans un article, 
+	* la classe .components-responsive-wrapper__content est pour img
+	* et sélectionner un svg ne crée pas une balise img.
+	*/
+	function fix_svg()
+	{
+		echo '<style type="text/css">
+        .attachment-60x60, .thumbnail img { 
+             width: 100% !important;
+             height: auto !important;
+        }
+        </style>';
+	}
+	add_action('admin_head', 'fix_svg');
+
 
 	// Configurer la fonctionnalité de fond personnalisé du noyau WordPress.
 	add_theme_support(
@@ -69,9 +118,14 @@ function phospixel_setup()
 			array(
 				'default-color' => 'ffffff',
 				'default-image' => '',
+				/*'default-image' => get_template_directory_uri() . '/assets/svg-papier.svg', */
 			)
 		)
 	);
+
+
+
+
 
 	// Ajouter la prise en charge du rafraîchissement sélectif des widgets pour le thème.
 	add_theme_support('customize-selective-refresh-widgets');
@@ -126,5 +180,3 @@ function phospixel_widgets_init()
 	);
 }
 add_action('widgets_init', 'phospixel_widgets_init');
-
-
