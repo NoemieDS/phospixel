@@ -57,15 +57,15 @@ h6 {
   margin: $espacement__moyen;
 }
 
+a,
+blockquote,
+button,
+cite,
+figcaption,
+li,
 p,
 ul,
-li,
-button,
-a,
 span,
-figcaption,
-cite,
-blockquote,
 time {
   color: $noir;
   font-family: $police__texte;
@@ -74,12 +74,12 @@ time {
   line-height: 160%;
 }
 
-p,
-ul,
-li,
+blockquote,
 cite,
+li,
 figcaption,
-blockquote {
+p,
+ul {
   padding-bottom: $espacement__moyen;
 }
 
@@ -87,10 +87,10 @@ li > p {
   display: inline;
 }
 
-strong,
 b,
 em,
-i {
+i,
+strong {
   font-weight: $police__texte-weight-bold;
 }
 
@@ -149,7 +149,13 @@ pre > code {
 
 pre {
   background-color: $couleur-gris-pale;
-  border-radius: 0.5rem;
   margin-bottom: $espacement__grand;
   padding: $espacement__moyen;
+}
+
+button,
+image,
+input,
+pre {
+  border-radius: 0.5rem;
 }

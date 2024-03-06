@@ -426,15 +426,15 @@ h6 {
   margin: clamp(1rem, 0.943rem + 0.229vw, 1.2rem);
 }
 
+a,
+blockquote,
+button,
+cite,
+figcaption,
+li,
 p,
 ul,
-li,
-button,
-a,
 span,
-figcaption,
-cite,
-blockquote,
 time {
   color: hsl(220, 5%, 4%);
   font-family: "Roboto", sans-serif;
@@ -443,12 +443,12 @@ time {
   line-height: 160%;
 }
 
-p,
-ul,
-li,
+blockquote,
 cite,
+li,
 figcaption,
-blockquote {
+p,
+ul {
   padding-bottom: clamp(1rem, 0.943rem + 0.229vw, 1.2rem);
 }
 
@@ -456,10 +456,10 @@ li > p {
   display: inline;
 }
 
-strong,
 b,
 em,
-i {
+i,
+strong {
   font-weight: 600;
 }
 
@@ -517,9 +517,15 @@ pre > code {
 
 pre {
   background-color: hsl(220, 20%, 80%);
-  border-radius: 0.5rem;
   margin-bottom: clamp(1.4rem, 1.286rem + 0.457vw, 1.8rem);
   padding: clamp(1rem, 0.943rem + 0.229vw, 1.2rem);
+}
+
+button,
+image,
+input,
+pre {
+  border-radius: 0.5rem;
 }
 
 /* 
@@ -592,7 +598,6 @@ form {
 }
 */
 input {
-  border-radius: 0.5rem;
   color: hsl(220, 5%, 4%);
   font-family: "Roboto", sans-serif;
 }
@@ -602,7 +607,6 @@ input:focus {
 }
 
 button {
-  border-radius: 0.5rem;
   font-size: clamp(0.875rem, 0.782rem + 0.371vw, 1.2rem);
   padding: clamp(0.7rem, 0.657rem + 0.216vw, 0.9rem);
 }
