@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Template part for displaying posts
+ * Template part pour afficher un article
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
@@ -15,6 +15,9 @@
   <?php
   the_content(); // Affiche le contenu de l'article fait dans WordPress
   ?>
-</article>
-
+  <!-- Afficher la date de la publication et la date de modification -->
+  <section class="article-date bloc-flex-cl-ct ">
+    <time><?php the_date(); ?></time>
+    <time><?php the_modified_date(); ?></time>
+  </section>
 </article>

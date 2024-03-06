@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Modèle pour toutes les pages
+ * Modèle pour boucler dans les articles
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *

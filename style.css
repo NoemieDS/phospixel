@@ -448,8 +448,7 @@ ul,
 li,
 cite,
 figcaption,
-blockquote,
-time {
+blockquote {
   padding-bottom: clamp(1rem, 0.943rem + 0.229vw, 1.2rem);
 }
 
@@ -662,7 +661,8 @@ img {
 }
 
 .site-footer {
-  padding: clamp(3rem, 2.886rem + 0.457vw, 3.4rem) clamp(1rem, 0.943rem + 0.229vw, 1.2rem);
+  margin-top: clamp(1rem, 0.943rem + 0.229vw, 1.2rem);
+  padding: clamp(4rem, 3.886rem + 0.457vw, 4.4rem) clamp(1rem, 0.943rem + 0.229vw, 1.2rem);
   width: 100%;
 }
 
@@ -678,6 +678,8 @@ img {
   color: hsl(220, 5%, 4%);
   font-size: clamp(0.8rem, 1.0887rem + 0.1453vw, 1.4375rem);
   line-height: 100%;
+  padding: 0;
+  margin: 0;
 }
 
 /* menu secondaire - widget 1 - balise aside
@@ -725,6 +727,11 @@ Widget du footer avec les liens vers les derniers articles*/
 /* Classe pour la balise article d'une page (template-parts content.php) */
 .article-page svg {
   margin-bottom: clamp(3rem, 2.886rem + 0.457vw, 3.4rem);
+}
+
+.article-date {
+  padding: clamp(3rem, 2.886rem + 0.457vw, 3.4rem);
+  border-bottom: 2px solid hsl(220, 100%, 30%);
 }
 
 /*Rangées*/
