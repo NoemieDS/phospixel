@@ -517,7 +517,7 @@ pre > code {
 
 pre {
   background-color: hsl(220, 20%, 80%);
-  border-radius: 1%;
+  border-radius: 0.5rem;
   margin-bottom: clamp(1.4rem, 1.286rem + 0.457vw, 1.8rem);
   padding: clamp(1rem, 0.943rem + 0.229vw, 1.2rem);
 }
@@ -567,6 +567,9 @@ a:hover, a:active {
   outline: 0;
 }
 
+form {
+  margin-bottom: clamp(2rem, 1.886rem + 0.457vw, 2.4rem);
+}
 @media screen and (min-width: 800px) {
   form {
     max-width: 60%;
@@ -588,11 +591,8 @@ a:hover, a:active {
   // width: clamp(16rem, 88vw, 22rem);
 }
 */
-form {
-  margin-bottom: clamp(2rem, 1.886rem + 0.457vw, 2.4rem);
-}
-
 input {
+  border-radius: 0.5rem;
   color: hsl(220, 5%, 4%);
   font-family: "Roboto", sans-serif;
 }
@@ -602,6 +602,7 @@ input:focus {
 }
 
 button {
+  border-radius: 0.5rem;
   font-size: clamp(0.875rem, 0.782rem + 0.371vw, 1.2rem);
   padding: clamp(0.7rem, 0.657rem + 0.216vw, 0.9rem);
 }
@@ -614,7 +615,6 @@ img {
 .entete-barre {
   background-color: hsl(220, 5%, 4%);
   padding: clamp(0.8rem, 0.743rem + 0.229vw, 1rem) clamp(1rem, 0.943rem + 0.229vw, 1.2rem);
-  position: fixed;
   width: 100%;
 }
 .entete-barre h1,
