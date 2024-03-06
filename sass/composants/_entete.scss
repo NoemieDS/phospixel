@@ -1,7 +1,9 @@
 .entete-barre {
   background-color: $noir;
-  padding: $espacement__petit $espacement__moyen;
-  width: 100%;
+  padding: 0 $espacement__moyen $espacement__petit $espacement__moyen;
+  /*   position: absolute;
+  top: 0;
+  width: 100%; */
 
   & h1,
   a {

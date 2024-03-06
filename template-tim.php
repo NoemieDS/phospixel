@@ -27,6 +27,7 @@ get_header();
     the_content(); // Affiche le contenu de l'article fait dans WordPress
     ?>
   </article>
+
   <!-- Affichage des articles de la catégorie tim -->
   <section>
     <?php
@@ -39,20 +40,24 @@ get_header();
           <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
           <?php
           $contenu = get_the_content();
-          preg_match('/<svg.*?>(.*?)<\/svg>/s',  $contenu, $match_svg);
 
-          if (!empty($match_svg[0])) {
-            // Affiche le contenu SVG
-            echo $match_svg[0];
-          } elseif (has_post_thumbnail()) {
-            // Affiche l'image mise en avant (post thumbnail) s'il n'y a pas de svg
-            $thumbnail_url = get_the_post_thumbnail_url(get_the_ID(), 'large');
-            echo '<img src="' . esc_url($thumbnail_url) . '" alt="' . esc_attr(get_the_title()) . '">';
+          // Teste s'il y a un SVG avec la classe 'affiche-en-premier'
+          preg_match('/<svg[^>]*class="([^"]*svg-vedette[^"]*)"[^>]*>(.*?)<\/svg>/s', $contenu, $match_svg_vedette);
+
+          if (!empty($match_svg_vedette[0])) {
+            // Affiche le SVG avec la classe 'affiche-en-premier'
+            echo $match_svg_vedette[0];
           } else {
-            preg_match('/<h2.*?>(.*?)<\/h2>/s',  $contenu, $match_h2);
-            if (!empty($match_h2[0])) {
-              // Affiche le contenu complet du H2 avec la balise H3
-              echo '<h3>' . $match_h2[1] . '</h3>';
+            // Teste s'il y a un SVG sans la classe 'affiche-en-premier'
+            preg_match('/<svg.*?>(.*?)<\/svg>/s', $contenu, $match_svg);
+
+            if (!empty($match_svg[0])) {
+              // Affiche le contenu SVG
+              echo $match_svg[0];
+            } elseif (has_post_thumbnail()) {
+              // Affiche l'image mise en avant (post thumbnail) s'il n'y a pas de svg
+              $thumbnail_url = get_the_post_thumbnail_url(get_the_ID(), 'large');
+              echo '<img src="' . esc_url($thumbnail_url) . '" alt="' . esc_attr(get_the_title()) . '">';
             } else {
               // Affiche le titre de l'article et les 20 premiers mots de the_content() avec la balise H3
               echo '<h3><a href="' . get_the_permalink() . '">' . get_the_title() . '</a></h3>';
@@ -62,6 +67,8 @@ get_header();
             }
           }
           ?>
+
+
         </article>
 
 

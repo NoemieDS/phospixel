@@ -154,8 +154,11 @@ pre {
 }
 
 button,
-image,
 input,
 pre {
-  border-radius: 0.5rem;
+  border-radius: 0.2rem;
+}
+
+img {
+  border-radius: 0.4rem;
 }

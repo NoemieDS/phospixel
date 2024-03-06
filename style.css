@@ -522,10 +522,13 @@ pre {
 }
 
 button,
-image,
 input,
 pre {
-  border-radius: 0.5rem;
+  border-radius: 0.2rem;
+}
+
+img {
+  border-radius: 0.4rem;
 }
 
 /* 
@@ -618,8 +621,10 @@ img {
 
 .entete-barre {
   background-color: hsl(220, 5%, 4%);
-  padding: clamp(0.8rem, 0.743rem + 0.229vw, 1rem) clamp(1rem, 0.943rem + 0.229vw, 1.2rem);
-  width: 100%;
+  padding: 0 clamp(1rem, 0.943rem + 0.229vw, 1.2rem) clamp(0.8rem, 0.743rem + 0.229vw, 1rem) clamp(1rem, 0.943rem + 0.229vw, 1.2rem);
+  /*   position: absolute;
+  top: 0;
+  width: 100%; */
 }
 .entete-barre h1,
 .entete-barre a {
