@@ -56,14 +56,13 @@ get_header();
             echo $match_svg_vedette[0];
           } else {
             // Si aucun svg-vedette, on affiche l'image de mise en avant 
-            //(qui peut être un svg - support dans functions.php)
+            //(qui peut être un svg - maintenant support dans functions.php)
             if (has_post_thumbnail()) {
               $thumbnail_url = get_the_post_thumbnail_url(get_the_ID(), 'large');
               echo '<img src="' . esc_url($thumbnail_url) . '" alt="' . esc_attr(get_the_title()) . '">';
             } else {
               // Si aucune image de mise en avant
-              // Affiche le titre de l'article et les 20 premiers mots de the_content() avec la balise H3
-              echo '<h2><a href="' . get_the_permalink() . '">' . get_the_title() . '</a></h2>';
+              // Afficher les 20 premiers mots de the_content() avec la balise H3
               $contenu_mots = preg_split("/[\s,]+/", strip_tags($contenu));
               $extrait = implode(' ', array_slice($contenu_mots, 0, 20));
               echo wpautop($extrait) . '...'; // Ajout de la balise <p> et des points de suspension
