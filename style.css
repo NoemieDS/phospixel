@@ -353,10 +353,8 @@ ul > li > a {
   list-style-type: none;
 }
 
-/*
-$police__lien: "Roboto", sans-serif;
-$police__lien-weight: 500;
-*/
+/* les titres */
+/* le texte */
 /* Les deux teintes principales */
 /************** Couleurs des titres ***************/
 /* H2, H4, H6 : $noir */
@@ -366,10 +364,12 @@ $police__lien-weight: 500;
 /* 
 ** Tout ce qui concerne des dimensions
 */
-/* Palliers pour les requêtes média */
+/* Palliers pour les requêtes média 
+*  Seul le formulaire de recherche a besoin de requêtes média !
+*/
 /* Espacements */
 /*
-CSS Clam font-size generator : https://clamp.font-size.app/
+CSS Clamp generator : https://www.marcbacon.com/tools/clamp-calculator/
 */
 h1,
 h2,
@@ -529,13 +529,12 @@ pre {
 
 img {
   border-radius: 0.4rem;
+  padding-bottom: clamp(0.8rem, 0.743rem + 0.229vw, 1rem);
+  max-width: 100%;
 }
 
 /* 
 ** Tout ce qui concerne la balise body
-** 
-*/
-/* 
 * Le fond se met dans le tableau de bord de WP, 
 * support svg ajouté dans functions.php 
 */
@@ -616,11 +615,6 @@ input:focus {
 button {
   font-size: clamp(0.875rem, 0.782rem + 0.371vw, 1.2rem);
   padding: clamp(0.7rem, 0.657rem + 0.216vw, 0.9rem);
-}
-
-img {
-  max-width: 100%;
-  padding-bottom: clamp(0.8rem, 0.743rem + 0.229vw, 1rem);
 }
 
 .entete-barre {
@@ -715,24 +709,13 @@ Widget du footer avec les liens vers les derniers articles*/
   color: hsl(220, 5%, 4%);
 }
 
-.article-base {
-  margin-bottom: clamp(1.4rem, 1.286rem + 0.457vw, 1.8rem);
-  padding: clamp(2rem, 1.886rem + 0.457vw, 2.4rem);
-  width: 100%;
-}
-
-@media screen and (min-width: 800px) {
-  .article-base p {
-    margin: 0 auto;
-    max-width: 90%;
-  }
-}
-
 .article-extrait {
   padding: 0;
-  margin: 0 clamp(2rem, 1.886rem + 0.457vw, 2.4rem) clamp(4rem, 3.886rem + 0.457vw, 4.4rem) clamp(2rem, 1.886rem + 0.457vw, 2.4rem);
+  margin: clamp(2rem, 1.886rem + 0.457vw, 2.4rem);
 }
-.article-extrait h2 {
+.article-extrait h2,
+.article-extrait a {
+  font-size: clamp(1.325rem, 1.132rem + 0.771vw, 2rem);
   font-weight: 500;
   line-height: 130%;
   margin: clamp(1.4rem, 1.286rem + 0.457vw, 1.8rem);
@@ -742,7 +725,9 @@ Widget du footer avec les liens vers les derniers articles*/
   text-align: center;
 }
 
-/* Classe pour la balise article d'une page (template-parts content.php) */
+/* Classe pour la balise article d'une page 
+* (comme dans template-parts content.php) 
+*/
 .article-page svg {
   margin-bottom: clamp(3rem, 2.886rem + 0.457vw, 3.4rem);
 }
@@ -777,25 +762,13 @@ Widget du footer avec les liens vers les derniers articles*/
   flex-direction: column;
 }
 
+/* Bloc de texte d'introduction
+*  Classe à mettre dans WP pour utilisation
+*/
 .heros-texte {
   border-bottom: hsl(220, 5%, 4%) 1px solid;
   color: hsl(220, 100%, 50%);
   font-size: clamp(1.7rem, -0.0385rem + 3vw, 2rem);
   line-height: 110%;
-  padding: clamp(1.4rem, 1.286rem + 0.457vw, 1.8rem);
-}
-@media screen and (min-width: 800px) {
-  .heros-texte {
-    width: 70%;
-  }
-}
-@media screen and (min-width: 992px) {
-  .heros-texte {
-    width: 60%;
-  }
-}
-@media screen and (min-width: 1800px) {
-  .heros-texte {
-    width: 50%;
-  }
+  margin: clamp(3rem, 2.886rem + 0.457vw, 3.4rem) clamp(6rem, 3.695rem + 12.715vw, 18rem) clamp(1.4rem, 1.286rem + 0.457vw, 1.8rem) clamp(6rem, 3.695rem + 12.715vw, 18rem);
 }/*# sourceMappingURL=style.css.map */

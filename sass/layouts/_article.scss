@@ -1,21 +1,10 @@
-.article-base {
-  margin-bottom: $espacement__grand;
-  padding: $espacement__xl;
-  width: 100%;
-}
-
-.article-base p {
-  @media screen and (min-width: $largeur__tablette) {
-    margin: 0 auto;
-    max-width: 90%;
-  }
-}
-
 .article-extrait {
   padding: 0;
-  margin: 0 $espacement__xl $espacement__3xl $espacement__xl;
+  margin: $espacement__xl;
 
-  & h2 {
+  & h2,
+  a {
+    font-size: clamp(1.325rem, 1.132rem + 0.771vw, 2rem);
     font-weight: $police__texte-weight;
     line-height: 130%;
     margin: $espacement__grand;
@@ -26,7 +15,9 @@
   }
 }
 
-/* Classe pour la balise article d'une page (template-parts content.php) */
+/* Classe pour la balise article d'une page 
+* (comme dans template-parts content.php) 
+*/
 .article-page {
   & svg {
     margin-bottom: $espacement__2xl;

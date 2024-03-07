@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Template part pour afficher un article
+ * Template part pour afficher le contenu d'un article
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *

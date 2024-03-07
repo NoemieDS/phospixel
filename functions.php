@@ -21,10 +21,11 @@ function phospixel_styles()
 	wp_enqueue_style('phospixel-style', get_stylesheet_uri(), array(), _S_VERSION);
 	wp_style_add_data('phospixel-style', 'rtl', 'replace');
 
-	wp_enqueue_script('phospixel-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true);
+	/* Pour référence, non utilisé*/
+	/* 	wp_enqueue_script('phospixel-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true); */
 
 
-	/* Intégration des polices de Google */
+	/* Intégration des polices Roboto de Google */
 	wp_enqueue_style('style-goolefont', 'href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"', false);
 }
 add_action('wp_enqueue_scripts', 'phospixel_styles');
@@ -39,7 +40,7 @@ function phospixel_setup()
 	/*
 		* Laissez WordPress gérer le titre du document.
 		* En ajoutant la prise en charge du thème, nous déclarons que ce thème n'utilise pas
-		* de balise <title> codée en dur dans l'en-tête du document, et nous attendons de WordPress
+		* de balise <title> codée dans l'en-tête du document, et nous attendons de WordPress
 		* qu'il le fournisse pour nous.
 		*/
 	add_theme_support('title-tag');
@@ -64,7 +65,7 @@ function phospixel_setup()
 	/*
 	* Ajouter du support pour les SVG et le XML, 
 	* permet de mettre des SVG dans la librairie et de les utiliser comme 
-	* image de mise en avant et comme background-image
+	* image de mise en avant et comme background-image 
 	*
 	* https://wpengine.com/resources/enable-svg-wordpress/
 	*/
@@ -118,6 +119,7 @@ function phospixel_setup()
 			array(
 				'default-color' => 'ffffff',
 				'default-image' => '',
+				/* Pour référence mais le fond est choisi dans le tableau de bord de WP -  Apparence */
 				/*'default-image' => get_template_directory_uri() . '/assets/svg-papier.svg', */
 			)
 		)

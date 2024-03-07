@@ -2,9 +2,6 @@
 
 /**
  * L'entête du thème
- *
- * This is the template that displays all of the <head> section and everything up until <div id="content">
- *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
  * @package PhōsPixel
@@ -17,12 +14,12 @@
 <head>
 	<meta <?php bloginfo('charset'); ?>>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<!-- Title dans theme support functions.php -->
+	<!-- Titre (title) dans theme support functions.php -->
 	<?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>> <!-- ajoute des classes et des infos personnalisées en fonction de la page affichée  -->
-	<?php wp_body_open(); ?> <!-- permet d'afficher la barre admin de WP en tout temps -->
+	<?php wp_body_open(); ?> <!-- permet d'afficher la barre admin de WP en tout temps, sinon problème de header qui saute -->
 	<header class="entete-barre bloc-flex-cl-ct">
 		<div class="wrapper-entete-pied bloc-flex-rw-ct">
 			<?php
@@ -36,8 +33,6 @@
 				<p class="site-description"><?php echo $phospixel_description;
 																		?></p>
 			<?php endif; ?>
-
-
 
 			<!-- Navigation principale (nav) -->
 			<?php

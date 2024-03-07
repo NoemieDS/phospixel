@@ -1,7 +1,7 @@
 .pagination {
   & a,
   span {
-    font-weight: 600;
+    font-weight: $police__texte-weight-bold;
     padding: 0 $espacement__xpetit;
   }
 

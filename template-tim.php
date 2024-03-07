@@ -5,7 +5,7 @@
  * 
  */
 
-// Définir le numéro de page actuel
+// Définir le numéro de page actuelle
 $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 
 // Nombre d'articles par page
@@ -28,11 +28,11 @@ get_header();
 
 <main class="wrapper site-main bloc-flex-cl-ct">
 
-  <article id="post-<?php the_ID(); ?>" <?php post_class('article-base'); ?>>
+  <section id="post-<?php the_ID(); ?>" <?php post_class('bloc-flex-cl-ct'); ?>>
     <?php
     the_content(); // Affiche le contenu de l'article fait dans WordPress
     ?>
-  </article>
+  </section>
 
   <!-- Affichage des articles de la catégorie tim -->
   <section>

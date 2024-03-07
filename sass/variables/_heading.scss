@@ -1,5 +1,5 @@
 /*
-CSS Clam font-size generator : https://clamp.font-size.app/
+CSS Clamp generator : https://www.marcbacon.com/tools/clamp-calculator/
 */
 
 h1,
@@ -161,4 +161,6 @@ pre {
 
 img {
   border-radius: 0.4rem;
+  padding-bottom: $espacement__petit;
+  max-width: 100%;
 }

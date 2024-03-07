@@ -18,6 +18,7 @@ get_header();
   while (have_posts()) :
     the_post();
 
+    /* Aller chercher le template pour afficher le contenu de la page */
     get_template_part('template-parts/content', 'page');
 
   endwhile; // Fin de la boucle.

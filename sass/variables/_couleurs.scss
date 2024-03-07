@@ -2,7 +2,7 @@ $couleur__test: hsl(132, 96%, 51%);
 
 /* Les deux teintes principales */
 $teinte-1: 220deg; // Bleu
-$teinte-2: 342deg; //Rose
+$teinte-2: 342deg; //Rose pour référence, utilisé pour les svg
 
 $noir: hsl($teinte-1, 5%, 4%);
 $blanc: hsl($teinte-1, 5%, 98%);
