@@ -706,6 +706,15 @@ Widget du footer avec les liens vers les derniers articles*/
   padding-bottom: clamp(0.8rem, 0.743rem + 0.229vw, 1rem);
 }
 
+.pagination a,
+.pagination span {
+  font-weight: 600;
+  padding: 0 clamp(0.7rem, 0.657rem + 0.216vw, 0.9rem);
+}
+.pagination span {
+  color: hsl(220, 5%, 4%);
+}
+
 .article-base {
   margin-bottom: clamp(1.4rem, 1.286rem + 0.457vw, 1.8rem);
   padding: clamp(2rem, 1.886rem + 0.457vw, 2.4rem);
@@ -748,6 +757,12 @@ Widget du footer avec les liens vers les derniers articles*/
   align-items: center;
   display: flex;
   justify-content: space-between;
+}
+
+.bloc-flex-rw-ct-ct {
+  align-items: center;
+  display: flex;
+  justify-content: center;
 }
 
 /*Colonnes*/

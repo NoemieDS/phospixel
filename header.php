@@ -23,7 +23,6 @@
 
 <body <?php body_class(); ?>> <!-- ajoute des classes et des infos personnalisées en fonction de la page affichée  -->
 	<?php wp_body_open(); ?> <!-- permet d'afficher la barre admin de WP en tout temps -->
-
 	<header class="entete-barre bloc-flex-cl-ct">
 		<div class="wrapper-entete-pied bloc-flex-rw-ct">
 			<?php

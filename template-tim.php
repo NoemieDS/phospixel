@@ -1,18 +1,24 @@
 <?php
 
-
 /**
  * Template name: recherche-tim
  * 
  */
 
-// Récupérer les articles de la catégorie "tim"
+// Définir le numéro de page actuel
+$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+
+// Nombre d'articles par page
+$posts_par_page = 9;
+
+// Récupérer les articles de la catégorie "tim" avec pagination
 $args = array(
   'category_name' => 'tim',
   'orderby' => 'date', // Tri par date
   'order' => 'DESC',   // Du plus récent au plus ancien
   'post_type' => 'post',
-  'posts_per_page' => -1,
+  'posts_per_page' => $posts_par_page,
+  'paged' => $paged // Pagination
 );
 $tim_posts_query  = new WP_Query($args);
 
@@ -41,39 +47,42 @@ get_header();
           <?php
           $contenu = get_the_content();
 
-          // Teste s'il y a un SVG avec la classe 'affiche-en-premier'
+          // Teste s'il y a un SVG avec la classe 'svg-vedette'
+          // Si oui, on l'affiche
           preg_match('/<svg[^>]*class="([^"]*svg-vedette[^"]*)"[^>]*>(.*?)<\/svg>/s', $contenu, $match_svg_vedette);
 
           if (!empty($match_svg_vedette[0])) {
-            // Affiche le SVG avec la classe 'affiche-en-premier'
+            // Affiche le SVG avec la classe 'svg-vedette'
             echo $match_svg_vedette[0];
           } else {
-            // Teste s'il y a un SVG sans la classe 'affiche-en-premier'
-            preg_match('/<svg.*?>(.*?)<\/svg>/s', $contenu, $match_svg);
-
-            if (!empty($match_svg[0])) {
-              // Affiche le contenu SVG
-              echo $match_svg[0];
-            } elseif (has_post_thumbnail()) {
-              // Affiche l'image mise en avant (post thumbnail) s'il n'y a pas de svg
+            // Si aucun svg-vedette, on affiche l'image de mise en avant 
+            //(qui peut être un svg - support dans functions.php)
+            if (has_post_thumbnail()) {
               $thumbnail_url = get_the_post_thumbnail_url(get_the_ID(), 'large');
               echo '<img src="' . esc_url($thumbnail_url) . '" alt="' . esc_attr(get_the_title()) . '">';
             } else {
+              // Si aucune image de mise en avant
               // Affiche le titre de l'article et les 20 premiers mots de the_content() avec la balise H3
-              echo '<h3><a href="' . get_the_permalink() . '">' . get_the_title() . '</a></h3>';
+              echo '<h2><a href="' . get_the_permalink() . '">' . get_the_title() . '</a></h2>';
               $contenu_mots = preg_split("/[\s,]+/", strip_tags($contenu));
               $extrait = implode(' ', array_slice($contenu_mots, 0, 20));
               echo wpautop($extrait) . '...'; // Ajout de la balise <p> et des points de suspension
             }
           }
           ?>
-
-
         </article>
-
 
     <?php
       endwhile;
+      // Afficher la pagination 
+      echo '<div class="pagination bloc-flex-rw-ct-ct">' . paginate_links(array(
+        'total' => $tim_posts_query->max_num_pages,
+        'paged' => $paged,
+        'prev_text' => '&laquo;', //chevron gauche
+        'next_text' => '&raquo;' //chevron droit
+      )) . '</div>';
+
+
       // Réinitialiser les données de la requête principale
       wp_reset_postdata();
     else :
@@ -85,3 +94,4 @@ get_header();
 </main>
 <?php
 get_footer();
+?>
