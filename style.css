@@ -768,7 +768,8 @@ Widget du footer avec les liens vers les derniers articles*/
 .heros-texte {
   border-bottom: hsl(220, 5%, 4%) 1px solid;
   color: hsl(220, 100%, 50%);
-  font-size: clamp(1.7rem, -0.0385rem + 3vw, 2rem);
+  font-weight: 600;
   line-height: 110%;
-  margin: clamp(3rem, 2.886rem + 0.457vw, 3.4rem) clamp(6rem, 3.695rem + 12.715vw, 18rem) clamp(1.4rem, 1.286rem + 0.457vw, 1.8rem) clamp(6rem, 3.695rem + 12.715vw, 18rem);
+  margin: clamp(3rem, 2.886rem + 0.457vw, 3.4rem) clamp(2rem, -1.073rem + 16.954vw, 18rem) clamp(1.4rem, 1.286rem + 0.457vw, 1.8rem) clamp(2rem, -1.073rem + 16.954vw, 18rem);
+  padding-bottom: clamp(1.4rem, 1.286rem + 0.457vw, 1.8rem);
 }/*# sourceMappingURL=style.css.map */
