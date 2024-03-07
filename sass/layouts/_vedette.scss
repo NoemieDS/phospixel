@@ -4,9 +4,10 @@
 .heros-texte {
   border-bottom: $noir 1px solid;
   color: $couleur__titre;
-  font-weight: $police__texte-weight-bold;
+  font-weight: $police__texte-weight;
   line-height: 110%;
   margin: $espacement__2xl $espacement__heros-texte $espacement__grand
     $espacement__heros-texte;
   padding-bottom: $espacement__grand;
+  text-align: center;
 }
