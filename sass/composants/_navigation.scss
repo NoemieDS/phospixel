@@ -4,6 +4,7 @@
     color: $couleur__lien-entete;
     font-weight: $police__texte-weight-bold;
     text-decoration: none;
+    text-shadow: none;
 
     &:visited {
       color: $couleur__lien-visite-entete;

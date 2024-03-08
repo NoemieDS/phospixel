@@ -19,6 +19,9 @@
 * (comme dans template-parts content.php) 
 */
 .article-page {
+  & h1 {
+    margin-top: $espacement__3xl;
+  }
   & svg {
     margin-bottom: $espacement__2xl;
   }

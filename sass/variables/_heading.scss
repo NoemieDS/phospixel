@@ -11,6 +11,7 @@ h6 {
   font-family: $police__titre;
   font-weight: $police__titre-weight;
   text-align: center;
+  text-shadow: $titre-ombre;
 }
 
 h1 {
@@ -72,6 +73,7 @@ time {
   font-size: clamp(1rem, 0.914rem + 0.432vw, 1.4rem);
   font-weight: $police__texte-weight;
   line-height: 160%;
+  text-shadow: $texte-ombre;
 }
 
 blockquote,
@@ -148,7 +150,7 @@ pre > code {
 }
 
 pre {
-  background-color: $couleur-gris-pale;
+  background-color: $couleur-gris-code;
   margin-bottom: $espacement__grand;
   padding: $espacement__moyen;
 }

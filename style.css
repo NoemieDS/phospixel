@@ -355,10 +355,9 @@ ul > li > a {
 
 /* les titres */
 /* le texte */
+/* les ombres */
 /* Les deux teintes principales */
 /************** Couleurs des titres ***************/
-/* H2, H4, H6 : $noir */
-/* H3, H5 : $couleur__lien */
 /************** Couleurs des liens ***************/
 /* Couleurs liens entête */
 /* 
@@ -380,6 +379,7 @@ h6 {
   font-family: "Roboto", sans-serif;
   font-weight: 700;
   text-align: center;
+  text-shadow: 0.01em -0.04em 0.2em hsl(220, 16%, 82%);
 }
 
 h1 {
@@ -441,6 +441,7 @@ time {
   font-size: clamp(1rem, 0.914rem + 0.432vw, 1.4rem);
   font-weight: 500;
   line-height: 160%;
+  text-shadow: 0.1em 0.1em 0.2em hsl(220, 16%, 80%);
 }
 
 blockquote,
@@ -516,7 +517,7 @@ pre > code {
 }
 
 pre {
-  background-color: hsl(220, 20%, 80%);
+  background-color: hsla(220, 20%, 80%, 0.6);
   margin-bottom: clamp(1.4rem, 1.286rem + 0.457vw, 1.8rem);
   padding: clamp(1rem, 0.943rem + 0.229vw, 1.2rem);
 }
@@ -634,6 +635,7 @@ button {
   color: hsl(220, 5%, 98%);
   font-weight: 600;
   text-decoration: none;
+  text-shadow: none;
 }
 .entete-barre a:visited,
 .nav-principale a:visited {
@@ -728,6 +730,9 @@ Widget du footer avec les liens vers les derniers articles*/
 /* Classe pour la balise article d'une page 
 * (comme dans template-parts content.php) 
 */
+.article-page h1 {
+  margin-top: clamp(4rem, 3.886rem + 0.457vw, 4.4rem);
+}
 .article-page svg {
   margin-bottom: clamp(3rem, 2.886rem + 0.457vw, 3.4rem);
 }
@@ -773,4 +778,9 @@ Widget du footer avec les liens vers les derniers articles*/
   margin: clamp(3rem, 2.886rem + 0.457vw, 3.4rem) clamp(2rem, -1.073rem + 16.954vw, 18rem) clamp(1.4rem, 1.286rem + 0.457vw, 1.8rem) clamp(2rem, -1.073rem + 16.954vw, 18rem);
   padding-bottom: clamp(1.4rem, 1.286rem + 0.457vw, 1.8rem);
   text-align: center;
+}
+
+.accueil.heros-texte {
+  color: hsl(220, 100%, 80%);
+  font-weight: 500;
 }/*# sourceMappingURL=style.css.map */
