@@ -12,7 +12,6 @@ get_header();
 ?>
 
 <main class="wrapper site-main bloc-flex-cl-ct">
-
   <?php
 
   while (have_posts()) :
@@ -23,7 +22,6 @@ get_header();
 
   endwhile; // Fin de la boucle.
   ?>
-
 </main>
 
 <?php

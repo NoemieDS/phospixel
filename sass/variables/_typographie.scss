@@ -15,3 +15,5 @@ $police__texte-weight-leger: 400;
 /* les ombres */
 $texte-ombre: 0.1em 0.1em 0.2em hsl(220, 16%, 80%);
 $titre-ombre: 0.01em -0.04em 0.2em hsl(220, 16%, 82%);
+
+$xpetit-texte: clamp(0.8rem, 0.68rem + 0.64vw, 1.4rem);

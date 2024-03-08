@@ -1,4 +1,7 @@
 .pagination {
+  margin-top: $espacement__2xl;
+  width: 100%;
+
   & a,
   span {
     font-weight: $police__texte-weight-bold;
@@ -7,5 +10,31 @@
 
   & span {
     color: $noir;
+  }
+}
+
+.article-suivant a,
+.article-precedent a,
+.article-suivant p,
+.article-precedent p {
+  display: inline;
+  font-size: $xpetit-texte;
+  margin: 0;
+  padding: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.article-suivant {
+  text-align: right;
+
+  & p {
+    padding-right: $espacement__petit;
+  }
+}
+
+.article-precedent {
+  & p {
+    padding-left: $espacement__petit;
   }
 }

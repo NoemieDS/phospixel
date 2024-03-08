@@ -20,6 +20,12 @@ $espacement__3xl: clamp(4rem, 3.886rem + 0.457vw, 4.4rem);
 
 $espacement__heros-texte: clamp(2rem, -1.073rem + 16.954vw, 18rem);
 
+/* Pour espacer */
+.spancer-m {
+  min-width: $espacement__moyen;
+  min-height: $espacement__petit;
+}
+
 /* Réduire la largeur
 *  Pour utilisation sur les médias dans WP
 */

@@ -367,6 +367,12 @@ ul > li > a {
 *  Seul le formulaire de recherche a besoin de requêtes média !
 */
 /* Espacements */
+/* Pour espacer */
+.spancer-m {
+  min-width: clamp(1rem, 0.943rem + 0.229vw, 1.2rem);
+  min-height: clamp(0.8rem, 0.743rem + 0.229vw, 1rem);
+}
+
 /* Réduire la largeur
 *  Pour utilisation sur les médias dans WP
 */
@@ -741,7 +747,7 @@ button {
 .site-info a,
 .site-info p {
   color: hsl(220, 5%, 4%);
-  font-size: clamp(0.8rem, 1.0887rem + 0.1453vw, 1.4375rem);
+  font-size: clamp(0.8rem, 0.68rem + 0.64vw, 1.4rem);
   line-height: 100%;
   padding: 0;
   margin: 0;
@@ -762,6 +768,10 @@ Widget du footer avec les liens vers les derniers articles*/
   padding-bottom: clamp(0.8rem, 0.743rem + 0.229vw, 1rem);
 }
 
+.pagination {
+  margin-top: clamp(3rem, 2.886rem + 0.457vw, 3.4rem);
+  width: 100%;
+}
 .pagination a,
 .pagination span {
   font-weight: 600;
@@ -769,6 +779,29 @@ Widget du footer avec les liens vers les derniers articles*/
 }
 .pagination span {
   color: hsl(220, 5%, 4%);
+}
+
+.article-suivant a,
+.article-precedent a,
+.article-suivant p,
+.article-precedent p {
+  display: inline;
+  font-size: clamp(0.8rem, 0.68rem + 0.64vw, 1.4rem);
+  margin: 0;
+  padding: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.article-suivant {
+  text-align: right;
+}
+.article-suivant p {
+  padding-right: clamp(0.8rem, 0.743rem + 0.229vw, 1rem);
+}
+
+.article-precedent p {
+  padding-left: clamp(0.8rem, 0.743rem + 0.229vw, 1rem);
 }
 
 /* 
@@ -831,6 +864,12 @@ Widget du footer avec les liens vers les derniers articles*/
   justify-content: center;
 }
 
+.bloc-flex-rw-ct-ev {
+  align-items: center;
+  display: flex;
+  justify-content: space-evenly;
+}
+
 /*Colonnes*/
 .bloc-flex-cl {
   display: flex;
@@ -848,6 +887,33 @@ Widget du footer avec les liens vers les derniers articles*/
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+}
+
+/* flex */
+.flex-0 {
+  flex: 1 1 0%;
+}
+
+.flex-100 {
+  flex: 1 1 100%;
+}
+
+.flex-auto {
+  flex: 1 1 auto;
+}
+
+/* Colonne à rangée */
+.bloc-flex-cl-rw-ev {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+@media screen and (min-width: 800px) {
+  .bloc-flex-cl-rw-ev {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
 }
 
 /* Bloc de texte d'introduction
