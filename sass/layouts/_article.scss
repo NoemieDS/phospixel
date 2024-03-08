@@ -1,23 +1,34 @@
+/* 
+* Extraits d'articles
+* (comme dans templste-tim.php - page Terrain de jeu)
+*/
+
 .article-extrait {
+  /* reset des classes pouvant être mises sur les éléments directement
+*  dans les articles de WP pour les redimensionner
+*/
+  & img,
+  svg {
+    height: 100%;
+    max-height: clamp(17.75rem, 13.7rem + 21.6vw, 38rem);
+    width: 100%;
+  }
+  height: auto;
+  margin-bottom: $espacement__3xl;
+  //max-height: clamp(17.75rem, 13.7rem + 21.6vw, 38rem); je laisse pour si jamais faire carte égale, ajuster le template
+  max-width: clamp(17.75rem, 13.7rem + 21.6vw, 38rem);
+  min-height: clamp(16rem, 13.6rem + 12.8vw, 28rem);
+  //min-height: clamp(17.75rem, 13.7rem + 21.6vw, 38rem); je laisse pour si jamais faire carte égale
+  min-width: clamp(17.75rem, 13.7rem + 21.6vw, 38rem);
   padding: 0;
-  margin: $espacement__xl;
+  width: auto;
 
   & h2,
   a {
     font-size: clamp(1.325rem, 1.132rem + 0.771vw, 2rem);
-    font-weight: $police__texte-weight;
+    font-weight: $police__titre-weight;
     line-height: 130%;
     margin: $espacement__grand;
-  }
-  & h3 {
-    margin: 0;
-    text-align: center;
-  }
-
-  & img,
-  svg {
-    width: 100%;
-    height: auto;
   }
 }
 
@@ -33,7 +44,7 @@
     margin-bottom: $espacement__2xl;
   }
 }
-
+/* date de publication et de modification */
 .article-date {
   padding: $espacement__2xl;
   border-bottom: 2px solid $couleur__lien;

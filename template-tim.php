@@ -9,7 +9,7 @@
 $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 
 // Nombre d'articles par page
-$posts_par_page = 6;
+$posts_par_page = 5;
 
 // Récupérer les articles de la catégorie "tim" avec pagination
 $args = array(
@@ -35,7 +35,7 @@ get_header();
   </section>
 
   <!-- Affichage des articles de la catégorie tim -->
-  <section>
+  <section class="bloc-flex-cl-ct-ev">
     <?php
     // Vérifier si des articles sont trouvés
     if ($tim_posts_query->have_posts()) :
