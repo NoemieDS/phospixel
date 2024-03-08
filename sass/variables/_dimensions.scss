@@ -19,3 +19,79 @@ $espacement__2xl: clamp(3rem, 2.886rem + 0.457vw, 3.4rem);
 $espacement__3xl: clamp(4rem, 3.886rem + 0.457vw, 4.4rem);
 
 $espacement__heros-texte: clamp(2rem, -1.073rem + 16.954vw, 18rem);
+
+/* Réduire la largeur
+*  Pour utilisation sur les médias dans WP
+*/
+
+@media screen and (min-width: $largeur__tablette) {
+  .w-90 {
+    height: auto;
+    width: 90%;
+  }
+
+  .w-85 {
+    height: auto;
+    width: 85%;
+  }
+
+  .w-80 {
+    height: auto;
+    width: 80%;
+  }
+
+  .w-75 {
+    height: auto;
+    width: 75%;
+  }
+
+  .w-70 {
+    height: auto;
+    width: 70%;
+  }
+
+  .w-65 {
+    height: auto;
+    width: 65%;
+  }
+
+  .w-60 {
+    height: auto;
+    width: 60%;
+  }
+
+  .w-55 {
+    height: auto;
+    width: 55%;
+  }
+
+  .w-50 {
+    height: auto;
+    width: 50%;
+  }
+
+  .w-45 {
+    height: auto;
+    width: 45%;
+  }
+
+  .w-40 {
+    height: auto;
+    width: 40%;
+  }
+
+  .w-35 {
+    height: auto;
+    width: 35%;
+  }
+
+  .w-30 {
+    height: auto;
+    width: 30%;
+  }
+
+  .w-25 {
+    height: auto;
+    width: 25%;
+  }
+}

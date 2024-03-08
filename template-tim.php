@@ -9,7 +9,7 @@
 $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 
 // Nombre d'articles par page
-$posts_par_page = 9;
+$posts_par_page = 6;
 
 // Récupérer les articles de la catégorie "tim" avec pagination
 $args = array(
