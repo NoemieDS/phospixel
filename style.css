@@ -834,6 +834,11 @@ Widget du footer avec les liens vers les derniers articles*/
   margin: clamp(1.4rem, 1.286rem + 0.457vw, 1.8rem);
 }
 
+.article-accueil a {
+  margin: 0;
+  padding: 0;
+}
+
 /* Classe pour la balise article d'une page 
 * (comme dans template-parts content.php) 
 */

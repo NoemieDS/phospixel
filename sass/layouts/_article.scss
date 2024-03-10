@@ -32,6 +32,13 @@
   }
 }
 
+.article-accueil {
+  & a {
+    margin: 0;
+    padding: 0;
+  }
+}
+
 /* Classe pour la balise article d'une page 
 * (comme dans template-parts content.php) 
 */
