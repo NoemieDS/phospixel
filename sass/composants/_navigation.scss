@@ -26,3 +26,61 @@
     }
   }
 }
+
+/* Bouton SVG pour remonter en haut de page*/
+.trajet-12032024 path {
+  d: path(
+    "M8.9,91.6c14.4,9.3,46.3,7.1,56-1c11.1-9.4,3.8-46.2-6-67.1c-11.5-24.7-25.4-28.6-41-9.1C5.7,29.6-5.7,82.1,8.9,91.6z"
+  );
+  fill: url(#degrade1-12032024);
+  transition: all 0.35s ease;
+  cursor: pointer;
+}
+
+.trajet-12032024 path:hover,
+.trajet-12032024 path:active {
+  d: path(
+    "M11.4,79.4c13.2,12.2,47.1,11.1,55.3-1.5c10.1-15.6,10.3-36.6-1-56.7C52.8-1.5,33.1-0.7,16.3,15.1C2.1,28.4-1.4,67.6,11.4,79.4z"
+  );
+  fill: url(#degrade2-12032024);
+}
+
+.couleur1-12032024 {
+  stop-color: hsla(220deg, 100%, 50%, 0.8);
+}
+
+.couleur2-12032024 {
+  stop-color: hsla(0.96deg, 100%, 60%, 0.8);
+}
+
+.couleur4-12032024 {
+  stop-color: hsla(220deg, 100%, 80%, 1);
+}
+
+.couleur3-12032024 {
+  stop-color: hsla(0.96deg, 100%, 60%, 0.8);
+}
+
+#retour_haut {
+  position: fixed;
+  bottom: 4.3rem;
+  right: 0.8rem;
+  height: auto;
+  opacity: 0.8;
+  transition: opacity 500ms;
+  width: clamp(2.8rem, 2.56rem + 1.28vw, 4rem);
+
+  @media screen and (min-width: $largeur__bureau) {
+    bottom: 0.8rem;
+    right: 1rem;
+  }
+}
+
+#retour_haut:hover {
+  opacity: 1;
+}
+
+#retour_haut svg {
+  border: none;
+  width: clamp(2.8rem, 2.56rem + 1.28vw, 4rem);
+}
