@@ -7,10 +7,6 @@
     font-weight: $police__texte-weight-bold;
     padding: 0 $espacement__xpetit;
   }
-
-  & span {
-    color: $noir;
-  }
 }
 
 .article-suivant a,
@@ -30,11 +26,13 @@
 
   & p {
     padding-right: $espacement__petit;
+    color: $couleur__lien;
   }
 }
 
 .article-precedent {
   & p {
     padding-left: $espacement__petit;
+    color: $couleur__lien;
   }
 }

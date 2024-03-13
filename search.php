@@ -24,6 +24,9 @@
         </div>
     <?php
       endwhile;
+    else :
+      // Si aucun résultat n'a été trouvé
+      echo '<h2 class="rechercher-aucun">Aucun résultat</h2>';
     endif;
     ?>
   </article>

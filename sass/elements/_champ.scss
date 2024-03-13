@@ -1,34 +1,62 @@
-form {
+form.rechercher-form {
   margin-bottom: $espacement__xl;
-  @media screen and (min-width: $largeur__tablette) {
-    max-width: 60%;
-  }
+  transform: translate(1rem);
+}
+
+form.wrapper-entete-pied {
+  padding-left: 0;
+}
+.rechercher-form label {
+  align-items: center;
+  display: flex;
+  height: 3rem;
+  min-height: 2.4rem;
+  max-width: 90%;
+}
+
+.rechercher-input {
+  background-color: $couleur-gris-code;
+  color: $noir;
+  font-family: $police__texte;
+  height: 3rem;
+  min-height: 2.4rem;
+  max-width: 80%;
+  padding-left: $espacement__xpetit;
+  width: 90vw;
 
   @media screen and (min-width: $largeur__bureau) {
     max-width: 45%;
+    width: 45%;
   }
 
   @media screen and (min-width: $largeur__bureau_large) {
-    max-width: 35%;
+    max-width: 30%;
+    width: 30%;
   }
 }
 
-/* Ne fonctionne pas bien
-.recherche {
-  // width: clamp(16rem, 88vw, 22rem);
-}
-*/
-
-input {
-  color: $noir;
-  font-family: $police__texte;
-}
-
-input:focus {
+.rechercher-input:focus {
   outline-color: $couleur__titre;
 }
 
-button {
-  font-size: clamp(0.875rem, 0.782rem + 0.371vw, 1.2rem);
-  padding: $espacement__xpetit;
+.rechercher-input::placeholder {
+  color: $couleur__lien;
+}
+
+.rechercher-bouton {
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+  transform: scale(0.5) translate(0, 0.4rem);
+  width: 1rem;
+}
+.rechercher-bouton:hover {
+  background-color: transparent;
+}
+
+#loupe-12032024 {
+  fill: none;
+  transform: rotate(-5deg);
 }

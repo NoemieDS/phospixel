@@ -30,8 +30,8 @@
     $next_post = get_next_post();
     if (!empty($next_post)) {
       $next_title = get_the_title($next_post->ID);
-      $next_title_encoded = htmlspecialchars($next_title, ENT_QUOTES, 'UTF-8');
-      echo '<a href="' . get_permalink($next_post->ID) . '">' . '<p>&laquo;</p>' . substr($next_title_encoded, 0, 18) . '...</a>';
+     /*  $next_title_encoded = htmlentities($next_title, ENT_QUOTES, 'UTF-8'); */
+      echo '<a href="' . get_permalink($next_post->ID) . '">' . '<p>&laquo;</p>' . substr($next_title, 0, 18) . '...</a>';
     }
     ?>
   </div>
@@ -42,8 +42,8 @@
     $previous_post = get_previous_post();
     if (!empty($previous_post)) {
       $previous_title = get_the_title($previous_post->ID);
-      $previous_title_encoded = htmlspecialchars($previous_title, ENT_QUOTES, 'UTF-8');
-      echo '<a href="' . get_permalink($previous_post->ID) . '">' . substr($previous_title_encoded, 0, 18) . '...' . '<p>&raquo;</p>' . '</a>';
+     /*  $previous_title_encoded = htmlentities($previous_title, ENT_QUOTES, 'UTF-8'); */
+      echo '<a href="' . get_permalink($previous_post->ID) . '">' . substr($previous_title, 0, 18) . '...' . '<p>&raquo;</p>' . '</a>';
     }
     ?>
   </div>

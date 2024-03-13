@@ -8,8 +8,9 @@
  */
 
 ?>
-<footer class="site-footer bloc-flex-cl wrapper-entete-pied">
+<footer class="site-footer bloc-flex-cl">
   <?php
+  get_search_form();
   get_sidebar();
   ?>
   <section class="site-info bloc-flex-rw-ct wrapper-entete-pied ">
