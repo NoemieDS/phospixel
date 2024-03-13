@@ -13,11 +13,13 @@ a {
   }
 
   &:focus {
-    outline: thin dotted;
+    outline: 0;
   }
 
   &:hover,
-  &:active {
+  &:active,
+  &:focus,
+  a:visited {
     outline: 0;
   }
 }

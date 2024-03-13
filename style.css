@@ -640,9 +640,10 @@ a:hover, a:focus, a:active {
   color: hsl(220, 100%, 50%);
 }
 a:focus {
-  outline: thin dotted;
+  outline: 0;
 }
-a:hover, a:active {
+a:hover, a:active, a:focus,
+a a:visited {
   outline: 0;
 }
 
@@ -806,7 +807,6 @@ form.wrapper-entete-pied {
 }
 
 #retour_haut svg {
-  border: none;
   width: clamp(2.8rem, 2.56rem + 1.28vw, 4rem);
 }
 
