@@ -607,7 +607,8 @@ img {
 */
 body {
   height: 100%;
-  max-width: 100%;
+  overflow-x: hidden;
+  max-width: 100vw;
   width: 100vw;
 }
 
@@ -787,13 +788,14 @@ form.wrapper-entete-pied {
 }
 
 #retour_haut {
-  position: fixed;
-  bottom: 4.3rem;
-  right: 0.8rem;
+  bottom: 0.4rem;
+  display: none;
   height: auto;
   opacity: 0.8;
+  position: fixed;
+  right: 0.3rem;
   transition: opacity 500ms;
-  width: clamp(2.8rem, 2.56rem + 1.28vw, 4rem);
+  width: clamp(2.2rem, 2.04rem + 0.853vw, 3rem);
 }
 @media screen and (min-width: 992px) {
   #retour_haut {
@@ -802,12 +804,9 @@ form.wrapper-entete-pied {
   }
 }
 
-#retour_haut:hover {
+#retour_haut:hover,
+#retour_haut:active {
   opacity: 1;
-}
-
-#retour_haut svg {
-  width: clamp(2.8rem, 2.56rem + 1.28vw, 4rem);
 }
 
 .site-main {
