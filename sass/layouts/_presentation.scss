@@ -1,0 +1,73 @@
+#post-116 h1 {
+  margin: 0;
+  transform: translateY(-50vh);
+}
+
+.presentation-titre {
+  margin-bottom: $espacement__moyen;
+  padding: 0;
+}
+
+/* div comprenant le svg */
+.presentation-titre-svg {
+  max-height: 70vh;
+  padding: 0;
+  width: clamp(18.75rem, 5rem + 73.333vw, 87.5rem);
+}
+
+#cercles-textes-13032024 {
+  pointer-events: none;
+
+  & .cercle__texte {
+    font-family: $police__titre;
+    font-weight: $police__titre-weight;
+    text-transform: uppercase;
+  }
+
+  & .cercle__texte--1 {
+    font-size: clamp(5rem, 4.2rem + 4.267vw, 9rem);
+    fill: $couleur__lien;
+    font-weight: $police__texte-weight;
+  }
+
+  & .cercle__texte--2 {
+    font-size: clamp(4rem, 4.2rem + 4.267vw, 8rem);
+    fill: hsl($teinte-2, 100%, 60%);
+  }
+  & .cercle__texte--3 {
+    font-size: clamp(2rem, 4.2rem + 4.267vw, 6rem);
+    fill: $couleur__lien-hover;
+    text-transform: none;
+  }
+
+  & .cercle__texte--4 {
+    font-size: clamp(0.8rem, 4.2rem + 4.267vw, 4rem);
+    fill: hsl($teinte-1, 100%, 65%);
+    font-weight: $police__texte-weight;
+  }
+  & .cercle__texte--5 {
+    font-size: clamp(0.58rem, 4.2rem + 4.267vw, 3rem);
+    fill: hsl($teinte-2, 100%, 40%);
+  }
+}
+
+/*section avec le titre et l'animation */
+.pleine-page1 {
+  height: 100vh;
+  width: 93vw;
+}
+
+/*toutes les autres sections */
+.pleine-page {
+  height: 100vh;
+  width: 100vw;
+}
+
+/* Les couleurs des sections */
+.pp-couleur1 {
+  background-color: hsla($teinte-2, 100%, 80%, 0.5);
+}
+
+.pp-couleur2 {
+  background-color: hsla($teinte-1, 100%, 80%, 0.5);
+}

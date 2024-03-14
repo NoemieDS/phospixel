@@ -25,6 +25,7 @@ Text Domain: phospixel
 @import "variables/heading";
 
 ///////////////////////////////////////////////////ELEMENTS///////////////////
+@import "elements/html";
 @import "elements/body";
 @import "elements/liens";
 @import "elements/champ";
@@ -41,3 +42,4 @@ Text Domain: phospixel
 @import "layouts/article";
 @import "layouts/flex";
 @import "layouts/vedette";
+@import "layouts/presentation";

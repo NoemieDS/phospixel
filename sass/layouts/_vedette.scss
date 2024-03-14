@@ -1,6 +1,8 @@
 /* Bloc de texte d'introduction
 *  Classe à mettre dans WP pour utilisation
 */
+
+/* Bloc de texte H1 pour les pages */
 .heros-texte {
   border-bottom: $noir 1px solid;
   color: $couleur__titre;
@@ -12,7 +14,77 @@
   text-align: center;
 }
 
-.accueil.heros-texte {
-  color: $couleur__lien-entete-hover;
-  font-weight: $police__texte-weight;
+/* Titre H1 */
+.accueil.heros-titre {
+  margin-top: $espacement__3xl;
 }
+
+.accueil-texte-info {
+  margin-left: $espacement__2xl;
+  margin-right: $espacement__2xl;
+  margin-bottom: $espacement__moyen;
+}
+
+/* Animation page d'accueil */
+/* #pattern-v3-10032024 {
+  @media screen and (min-width: $largeur__bureau) {
+    transform: scale(1.5);
+    /*    @keyframes changer-echelle-v3-10032024 {
+      0% {
+        transform: scale(0.05);
+        rx: 50;
+      }
+
+      35% {
+        rx: 40;
+      }
+
+      50% {
+        transform: scale(1);
+        rx: 0;
+      }
+
+      70% {
+        transform: scale(3.25);
+        rx: 50;
+      }
+
+      100% {
+        transform: scale(3.25);
+        rx: 0;
+      }
+    }
+
+    .top-gauche-3-10032024 {
+      transform-origin: 50px 50px;
+      width: 100px;
+      height: 100px;
+      rx: 50;
+    }
+
+    .bas-gauche-3-10032024 {
+      transform-origin: 50px 150px;
+      width: 100px;
+      height: 100px;
+      rx: 50;
+      x: 100;
+    }
+
+    .top-droit-3-10032024 {
+      transform-origin: 150px 50px;
+      width: 100px;
+      height: 100px;
+      rx: 50;
+      y: 100;
+    }
+
+    .bas-droit-3-10032024 {
+      transform-origin: 150px 150px;
+      width: 100px;
+      height: 100px;
+      rx: 50;
+      x: 100;
+      y: 100;
+    } */
+/* }
+} */

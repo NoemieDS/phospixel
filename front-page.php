@@ -25,7 +25,7 @@ get_header();
 ?>
 
 <main class="wrapper site-main bloc-flex-cl-ct">
-
+<?php dynamic_sidebar('animation'); ?>
   <?php dynamic_sidebar('accueil'); ?>
 
   <!-- Articles de la catégorie accueil -->
@@ -38,6 +38,8 @@ get_header();
       while ($accueil_posts_query->have_posts()) : $accueil_posts_query->the_post();
     ?>
         <article class="article-extrait article-accueil bloc-flex-cl-ct">
+        <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+
           <a href="<?php the_permalink(); ?>">
             <?php
             $contenu = get_the_content();

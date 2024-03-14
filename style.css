@@ -600,6 +600,10 @@ img {
   max-width: 100%;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* 
 ** Tout ce qui concerne la balise body
 * Le fond se met dans le tableau de bord de WP, 
@@ -972,6 +976,7 @@ Widget du footer avec les liens vers les derniers articles*/
   align-items: center;
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 
 .bloc-flex-cl-ct-ev {
@@ -1011,6 +1016,7 @@ Widget du footer avec les liens vers les derniers articles*/
 /* Bloc de texte d'introduction
 *  Classe à mettre dans WP pour utilisation
 */
+/* Bloc de texte H1 pour les pages */
 .heros-texte {
   border-bottom: hsl(220, 5%, 4%) 1px solid;
   color: hsl(220, 100%, 50%);
@@ -1021,7 +1027,146 @@ Widget du footer avec les liens vers les derniers articles*/
   text-align: center;
 }
 
-.accueil.heros-texte {
-  color: hsl(220, 100%, 80%);
+/* Titre H1 */
+.accueil.heros-titre {
+  margin-top: clamp(4rem, 3.886rem + 0.457vw, 4.4rem);
+}
+
+.accueil-texte-info {
+  margin-left: clamp(3rem, 2.886rem + 0.457vw, 3.4rem);
+  margin-right: clamp(3rem, 2.886rem + 0.457vw, 3.4rem);
+  margin-bottom: clamp(1rem, 0.943rem + 0.229vw, 1.2rem);
+}
+
+/* Animation page d'accueil */
+/* #pattern-v3-10032024 {
+  @media screen and (min-width: $largeur__bureau) {
+    transform: scale(1.5);
+    /*    @keyframes changer-echelle-v3-10032024 {
+      0% {
+        transform: scale(0.05);
+        rx: 50;
+      }
+
+      35% {
+        rx: 40;
+      }
+
+      50% {
+        transform: scale(1);
+        rx: 0;
+      }
+
+      70% {
+        transform: scale(3.25);
+        rx: 50;
+      }
+
+      100% {
+        transform: scale(3.25);
+        rx: 0;
+      }
+    }
+
+    .top-gauche-3-10032024 {
+      transform-origin: 50px 50px;
+      width: 100px;
+      height: 100px;
+      rx: 50;
+    }
+
+    .bas-gauche-3-10032024 {
+      transform-origin: 50px 150px;
+      width: 100px;
+      height: 100px;
+      rx: 50;
+      x: 100;
+    }
+
+    .top-droit-3-10032024 {
+      transform-origin: 150px 50px;
+      width: 100px;
+      height: 100px;
+      rx: 50;
+      y: 100;
+    }
+
+    .bas-droit-3-10032024 {
+      transform-origin: 150px 150px;
+      width: 100px;
+      height: 100px;
+      rx: 50;
+      x: 100;
+      y: 100;
+    } */
+/* }
+} */
+#post-116 h1 {
+  margin: 0;
+  transform: translateY(-50vh);
+}
+
+.presentation-titre {
+  margin-bottom: clamp(1rem, 0.943rem + 0.229vw, 1.2rem);
+  padding: 0;
+}
+
+/* div comprenant le svg */
+.presentation-titre-svg {
+  max-height: 70vh;
+  padding: 0;
+  width: clamp(18.75rem, 5rem + 73.333vw, 87.5rem);
+}
+
+#cercles-textes-13032024 {
+  pointer-events: none;
+}
+#cercles-textes-13032024 .cercle__texte {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+#cercles-textes-13032024 .cercle__texte--1 {
+  font-size: clamp(5rem, 4.2rem + 4.267vw, 9rem);
+  fill: hsl(220, 100%, 30%);
   font-weight: 500;
+}
+#cercles-textes-13032024 .cercle__texte--2 {
+  font-size: clamp(4rem, 4.2rem + 4.267vw, 8rem);
+  fill: hsl(342, 100%, 60%);
+}
+#cercles-textes-13032024 .cercle__texte--3 {
+  font-size: clamp(2rem, 4.2rem + 4.267vw, 6rem);
+  fill: hsl(220, 100%, 50%);
+  text-transform: none;
+}
+#cercles-textes-13032024 .cercle__texte--4 {
+  font-size: clamp(0.8rem, 4.2rem + 4.267vw, 4rem);
+  fill: hsl(220, 100%, 65%);
+  font-weight: 500;
+}
+#cercles-textes-13032024 .cercle__texte--5 {
+  font-size: clamp(0.58rem, 4.2rem + 4.267vw, 3rem);
+  fill: hsl(342, 100%, 40%);
+}
+
+/*section avec le titre et l'animation */
+.pleine-page1 {
+  height: 100vh;
+  width: 93vw;
+}
+
+/*toutes les autres sections */
+.pleine-page {
+  height: 100vh;
+  width: 100vw;
+}
+
+/* Les couleurs des sections */
+.pp-couleur1 {
+  background-color: hsla(342, 100%, 80%, 0.5);
+}
+
+.pp-couleur2 {
+  background-color: hsla(220, 100%, 80%, 0.5);
 }/*# sourceMappingURL=style.css.map */

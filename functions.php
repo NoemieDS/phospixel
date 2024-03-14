@@ -30,11 +30,6 @@ wp_enqueue_script('phospixel-navigation', get_template_directory_uri() . '/js/na
 add_action('wp_enqueue_scripts', 'phospixel_scripts');
 
 
-
-
-
-
-
 /**
  * Configure les paramètres par défaut du thème et enregistre le support pour diverses fonctionnalités de WordPress.
  */
@@ -129,10 +124,6 @@ function phospixel_setup()
 		)
 	);
 
-
-
-
-
 	// Ajouter la prise en charge du rafraîchissement sélectif des widgets pour le thème.
 	add_theme_support('customize-selective-refresh-widgets');
 
@@ -169,6 +160,19 @@ function phospixel_widgets_init()
 			'before_widget' => '<section id="%1$s" class="widget %2$s widget-h2-sidebar">',
 			'after_widget'  => '</section>',
 			'before_title'  => '<h2 class="widget-h2-sidebar-titre">',
+			'after_title'   => '</h2>',
+		)
+	);
+
+
+	register_sidebar(
+		array(
+			'name'          => esc_html__('Animation', 'phospixel'),
+			'id'            => 'animation',
+			'description'   => esc_html__("Une zone pour afficher une animation.", 'phospixel'),
+			'before_widget' => '<article id="%1$s" class="widget %2$s article-base">',
+			'after_widget'  => '</article>',
+			'before_title'  => '<h2 class="article-base-titre">',
 			'after_title'   => '</h2>',
 		)
 	);

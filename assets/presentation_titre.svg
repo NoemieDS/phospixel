@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<svg version="1.1" id="cercles-textes-13032024" width="100%" height="100%" xmlns='http://www.w3.org/2000/svg'
+  xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1400 1400">
+  <title>textPath animé</title>
+  <style>
+    @keyframes anim-scale-13032024 {
+      0% {
+        transform: scale(1.4);
+      }
+
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    @keyframes anim-rotation-13032024 {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    .cercles__textes {
+      transform-origin: 700px 700px;
+      animation: anim-scale-13032024 4s infinite alternate-reverse;
+    }
+
+    .cercle__texte--1 {
+      transform-origin: 700px 700px;
+      animation: anim-rotation-13032024 4s infinite;
+    }
+
+    .cercle__texte--2 {
+      transform-origin: 700px 700px;
+      animation: anim-rotation-13032024 3s reverse infinite;
+    }
+
+    .cercle__texte--3 {
+      transform-origin: 700px 700px;
+      animation: anim-rotation-13032024 4s infinite;
+    }
+
+    .cercle__texte--4 {
+      transform-origin: 700px 700px;
+      animation: anim-rotation-13032024 5s reverse infinite;
+    }
+
+    .cercle__texte--5 {
+      transform-origin: 700px 700px;
+      animation: anim-rotation-13032024 2s infinite;
+    }
+  </style>
+  <def>
+    <path id="cercle-1" d="M250,700.5A450.5,450.5 0 1 11151,700.5A450.5,450.5 0 1 1250,700.5" />
+    <path id="cercle-2" d="M382,700.5A318.5,318.5 0 1 11019,700.5A318.5,318.5 0 1 1382,700.5" />
+    <path id="cercle-3" d="M487,700.5A213.5,213.5 0 1 1914,700.5A213.5,213.5 0 1 1487,700.5" />
+    <path id="cercle-4" d="M567.5,700.5A133,133 0 1 1833.5,700.5A133,133 0 1 1567.5,700.5" />
+    <path id="cercle-5" d="M667,700.5A33,33 0 1 1733.5,700.5A33,33 0 1 1667.5,700.5" />
+  </def>
+  <g class="cercles__textes">
+    <text class="cercle__texte cercle__texte--1">
+      <textPath href="#cercle-1" aria-label="" textLength="2830">SVG - Animation - SVG - Animation
+      </textPath>
+
+    </text>
+    <text class="cercle__texte cercle__texte--2">
+      <textPath class="cercle__texte-path" href="#cercle-2" aria-label="" textLength="2001">WordPress X
+        Playground</textPath>
+    </text>
+    <text class="cercle__texte cercle__texte--3">
+      <textPath class="cercle__texte-path" href="#cercle-3" aria-label="" textLength="1341">CSS stroke-dashoffset
+        getTotalLength()</textPath>
+    </text>
+    <text class="cercle__texte cercle__texte--4">
+      <textPath class="cercle__texte-path" href="#cercle-4" aria-label="" textLength="836">Pattern Morph Masque
+        Filtre</textPath>
+    </text>
+    <text class="cercle__texte cercle__texte--5">
+      <textPath class="cercle__texte-path" href="#cercle-5" aria-label="" textLength="200">- SVG - SVG
+      </textPath>
+    </text>
+  </g>
+</svg>
