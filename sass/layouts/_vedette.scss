@@ -11,80 +11,30 @@
   margin: $espacement__2xl $espacement__heros-texte $espacement__grand
     $espacement__heros-texte;
   padding-bottom: $espacement__grand;
-  text-align: center;
+  text-align: left;
 }
 
 /* Titre H1 */
 .accueil.heros-titre {
-  margin-top: $espacement__3xl;
+  border-bottom: $noir 1px solid;
+  color: $couleur__titre;
+  font-weight: $police__texte-weight;
+  line-height: 110%;
+  margin: $espacement__3xl $espacement__heros-texte $espacement__grand
+    $espacement__heros-texte;
+  padding-bottom: $espacement__grand;
+  text-align: center;
 }
 
 .accueil-texte-info {
-  margin-left: $espacement__2xl;
-  margin-right: $espacement__2xl;
+  margin-left: $espacement__moyen;
+  margin-right: $espacement__moyen;
   margin-bottom: $espacement__moyen;
-}
 
-/* Animation page d'accueil */
-/* #pattern-v3-10032024 {
   @media screen and (min-width: $largeur__bureau) {
-    transform: scale(1.5);
-    /*    @keyframes changer-echelle-v3-10032024 {
-      0% {
-        transform: scale(0.05);
-        rx: 50;
-      }
-
-      35% {
-        rx: 40;
-      }
-
-      50% {
-        transform: scale(1);
-        rx: 0;
-      }
-
-      70% {
-        transform: scale(3.25);
-        rx: 50;
-      }
-
-      100% {
-        transform: scale(3.25);
-        rx: 0;
-      }
-    }
-
-    .top-gauche-3-10032024 {
-      transform-origin: 50px 50px;
-      width: 100px;
-      height: 100px;
-      rx: 50;
-    }
-
-    .bas-gauche-3-10032024 {
-      transform-origin: 50px 150px;
-      width: 100px;
-      height: 100px;
-      rx: 50;
-      x: 100;
-    }
-
-    .top-droit-3-10032024 {
-      transform-origin: 150px 50px;
-      width: 100px;
-      height: 100px;
-      rx: 50;
-      y: 100;
-    }
-
-    .bas-droit-3-10032024 {
-      transform-origin: 150px 150px;
-      width: 100px;
-      height: 100px;
-      rx: 50;
-      x: 100;
-      y: 100;
-    } */
-/* }
-} */
+    margin-left: $espacement__3xl;
+    margin-right: $espacement__3xl;
+    padding-left: $espacement__xl;
+    padding-right: $espacement__xl;
+  }
+}

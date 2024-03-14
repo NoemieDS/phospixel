@@ -1,8 +1,10 @@
-#post-116 h1 {
-  margin: 0;
-  transform: translateY(-50vh);
+#post-2027 {
+  text-shadow: 0.1em 0.1em 0.2em hsl(0, 0%, 66%);
+  & h1 {
+    margin: 0;
+    transform: translateY(-50vh);
+  }
 }
-
 .presentation-titre {
   margin-bottom: $espacement__moyen;
   padding: 0;
@@ -47,7 +49,7 @@
   }
   & .cercle__texte--5 {
     font-size: clamp(0.58rem, 4.2rem + 4.267vw, 3rem);
-    fill: hsl($teinte-2, 100%, 40%);
+    fill: hsl($teinte-2, 100%, 50%);
   }
 }
 
@@ -64,10 +66,26 @@
 }
 
 /* Les couleurs des sections */
-.pp-couleur1 {
-  background-color: hsla($teinte-2, 100%, 80%, 0.5);
+.pp-rose {
+  background-color: hsla($teinte-2, 30%, 80%, 0.5);
 }
 
-.pp-couleur2 {
-  background-color: hsla($teinte-1, 100%, 80%, 0.5);
+.pp-bleu {
+  background-color: hsla($teinte-1, 40%, 70%, 0.5);
+}
+
+.pp-gris {
+  background-color: hsla($teinte-1, 15%, 65%, 0.5);
+}
+
+.pp-rose2 {
+  background-color: hsla($teinte-2, 25%, 60%, 0.5);
+}
+
+.pp-bleu2 {
+  background-color: hsla($teinte-1, 30%, 60%, 0.5);
+}
+
+.pp-gris2 {
+  background-color: hsla($teinte-1, 0%, 65%, 0.5);
 }
