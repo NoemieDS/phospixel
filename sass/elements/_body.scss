@@ -17,7 +17,7 @@ body {
   width: 100vw;
 }
 
-/* Pour les balises header, footer, aside */
+// Pour les balises header, footer, aside
 .wrapper-entete-pied {
   width: clamp(16rem, 90vw, 90rem);
   margin-left: auto;
@@ -26,7 +26,7 @@ body {
   padding-right: 1rem;
 }
 
-/* Pour la balise main */
+// Pour la balise main
 .wrapper {
   width: clamp(16rem, 90vw, 70rem);
   margin-left: auto;

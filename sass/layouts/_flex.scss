@@ -38,18 +38,6 @@
   justify-content: space-evenly;
 }
 
-/* flex */
-.flex-0 {
-  flex: 1 1 0%;
-}
-
-.flex-100 {
-  flex: 1 1 100%;
-}
-.flex-auto {
-  flex: 1 1 auto;
-}
-
 /* Colonne à rangée */
 .bloc-flex-cl-rw-ev {
   align-items: center;
@@ -61,4 +49,16 @@
     flex-direction: row;
     justify-content: space-evenly;
   }
+}
+
+/* flex */
+.flex-0 {
+  flex: 1 1 0%;
+}
+
+.flex-100 {
+  flex: 1 1 100%;
+}
+.flex-auto {
+  flex: 1 1 auto;
 }

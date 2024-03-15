@@ -4,8 +4,6 @@
  */
 
 document.addEventListener("DOMContentLoaded", function () {
-  console.log("Le script est en cours d'exécution."); // Ajout du console.log()
-
   let retourHautBouton = document.getElementById("retour_haut");
 
   // Afficher ou masquer le bouton en fonction du défilement

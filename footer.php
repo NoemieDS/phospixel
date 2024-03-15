@@ -39,6 +39,7 @@
 </svg>
 </a>
 </footer>
+<!-- Appel du footer pour charger les scripts JS -->
 <?php wp_footer() ?>
 </body>
 

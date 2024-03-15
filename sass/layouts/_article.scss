@@ -1,6 +1,6 @@
 /* 
 * Extraits d'articles
-* (comme dans templste-tim.php - page Terrain de jeu)
+* (comme dans template-tim.php - page Terrain de jeu)
 */
 
 .article-extrait {
@@ -37,7 +37,7 @@
     margin: 0;
     padding: 0;
 
-    /* le svg de la présentation */
+    // le svg de la présentation
     & #cercles-textes-13032024 {
       @media screen and (min-width: $largeur__bureau) {
         height: 500px;
@@ -47,7 +47,7 @@
   }
 }
 
-/* le svg de la présentation */
+// le svg de la présentation
 .article-accueil > #cercles-textes-13032024 {
   @media screen and (min-width: $largeur__bureau) {
     max-width: 50%;
@@ -67,8 +67,13 @@
   & svg {
     margin-bottom: $espacement__2xl;
   }
+  & ul,
+  li {
+    margin-left: $espacement__xl;
+    margin-right: $espacement__xl;
+  }
 }
-/* date de publication et de modification */
+// date de publication et de modification
 .article-date {
   padding: $espacement__2xl;
   border-bottom: 2px solid $couleur__lien;

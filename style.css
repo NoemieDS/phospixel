@@ -621,7 +621,6 @@ body {
   width: 100vw;
 }
 
-/* Pour les balises header, footer, aside */
 .wrapper-entete-pied {
   width: clamp(16rem, 90vw, 90rem);
   margin-left: auto;
@@ -630,7 +629,6 @@ body {
   padding-right: 1rem;
 }
 
-/* Pour la balise main */
 .wrapper {
   width: clamp(16rem, 90vw, 70rem);
   margin-left: auto;
@@ -766,7 +764,6 @@ form.wrapper-entete-pied {
   outline: 0;
 }
 
-/* Bouton SVG pour remonter en haut de page*/
 .trajet-12032024 path {
   d: path("M8.9,91.6c14.4,9.3,46.3,7.1,56-1c11.1-9.4,3.8-46.2-6-67.1c-11.5-24.7-25.4-28.6-41-9.1C5.7,29.6-5.7,82.1,8.9,91.6z");
   fill: url(#degrade1-12032024);
@@ -848,8 +845,6 @@ form.wrapper-entete-pied {
   margin: 0;
 }
 
-/* menu secondaire - widget 1 - balise aside
-Widget du footer avec les liens vers les derniers articles*/
 #menu-secondaire .wp-block-heading {
   color: hsl(220, 5%, 4%);
   margin-bottom: 0.1rem;
@@ -901,7 +896,7 @@ Widget du footer avec les liens vers les derniers articles*/
 
 /* 
 * Extraits d'articles
-* (comme dans templste-tim.php - page Terrain de jeu)
+* (comme dans template-tim.php - page Terrain de jeu)
 */
 .article-extrait {
   /* reset des classes pouvant être mises sur les éléments directement
@@ -932,7 +927,6 @@ Widget du footer avec les liens vers les derniers articles*/
 .article-accueil a {
   margin: 0;
   padding: 0;
-  /* le svg de la présentation */
 }
 @media screen and (min-width: 992px) {
   .article-accueil a #cercles-textes-13032024 {
@@ -941,7 +935,6 @@ Widget du footer avec les liens vers les derniers articles*/
   }
 }
 
-/* le svg de la présentation */
 @media screen and (min-width: 992px) {
   .article-accueil > #cercles-textes-13032024 {
     max-width: 50%;
@@ -960,8 +953,12 @@ Widget du footer avec les liens vers les derniers articles*/
 .article-page svg {
   margin-bottom: clamp(3rem, 2.886rem + 0.457vw, 3.4rem);
 }
+.article-page ul,
+.article-page li {
+  margin-left: clamp(2rem, 1.886rem + 0.457vw, 2.4rem);
+  margin-right: clamp(2rem, 1.886rem + 0.457vw, 2.4rem);
+}
 
-/* date de publication et de modification */
 .article-date {
   padding: clamp(3rem, 2.886rem + 0.457vw, 3.4rem);
   border-bottom: 2px solid hsl(220, 100%, 30%);
@@ -1007,19 +1004,6 @@ Widget du footer avec les liens vers les derniers articles*/
   justify-content: space-evenly;
 }
 
-/* flex */
-.flex-0 {
-  flex: 1 1 0%;
-}
-
-.flex-100 {
-  flex: 1 1 100%;
-}
-
-.flex-auto {
-  flex: 1 1 auto;
-}
-
 /* Colonne à rangée */
 .bloc-flex-cl-rw-ev {
   align-items: center;
@@ -1032,6 +1016,19 @@ Widget du footer avec les liens vers les derniers articles*/
     flex-direction: row;
     justify-content: space-evenly;
   }
+}
+
+/* flex */
+.flex-0 {
+  flex: 1 1 0%;
+}
+
+.flex-100 {
+  flex: 1 1 100%;
+}
+
+.flex-auto {
+  flex: 1 1 auto;
 }
 
 /* Bloc de texte d'introduction
@@ -1077,22 +1074,14 @@ Widget du footer avec les liens vers les derniers articles*/
 #post-116 {
   text-shadow: 0.1em 0.1em 0.2em hsl(0, 0%, 66%);
 }
-#post-2027 h1,
-#post-116 h1 {
-  margin: 0;
-  transform: translateY(-50vh);
+#post-2027 h2,
+#post-116 h2 {
+  color: hsl(220, 100%, 50%);
+  margin-top: clamp(4rem, 3.886rem + 0.457vw, 4.4rem);
+  margin-bottom: clamp(2rem, 1.886rem + 0.457vw, 2.4rem);
 }
 
-.presentation-titre {
-  color: hsl(220, 100%, 30%);
-  font-size: clamp(1.425rem, 1.146rem + 1.114vw, 2.4rem);
-  font-weight: 800;
-  margin: clamp(4rem, 3.886rem + 0.457vw, 4.4rem) clamp(1rem, 0.943rem + 0.229vw, 1.2rem) clamp(2rem, 1.886rem + 0.457vw, 2.4rem) clamp(1rem, 0.943rem + 0.229vw, 1.2rem);
-  text-align: center;
-}
-
-/* div comprenant le svg */
-.presentation-titre-svg {
+.presentation-svg {
   min-height: 70vh;
   max-height: 70vh;
   padding: 0;
@@ -1131,13 +1120,11 @@ Widget du footer avec les liens vers les derniers articles*/
   fill: hsl(342, 100%, 50%);
 }
 
-/*section avec le titre et l'animation */
 .pleine-page1 {
   height: 100vh;
   width: 100vw;
 }
 
-/*toutes les autres sections */
 .pleine-page {
   max-width: 100vw;
   height: 100%;
@@ -1145,7 +1132,6 @@ Widget du footer avec les liens vers les derniers articles*/
   width: 100vw;
 }
 
-/* Les couleurs des sections */
 .pp-rose {
   background-color: hsla(342, 30%, 80%, 0.5);
 }
