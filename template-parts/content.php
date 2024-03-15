@@ -16,7 +16,7 @@
   the_content(); // Affiche le contenu de l'article fait dans WordPress
   ?>
   <!-- Afficher la date de la publication et la date de modification -->
-  <section class="article-date bloc-flex-cl-ct">
+  <section class="article-date bloc-flex-cl">
     <time><?php the_date(); ?></time>
     <time><?php the_modified_date(); ?></time>
   </section>

@@ -161,6 +161,10 @@ pre {
   border-radius: 0.2rem;
 }
 
+figure {
+  margin-top: $espacement__moyen;
+  margin-bottom: $espacement__xl;
+}
 img {
   padding-bottom: $espacement__petit;
   max-width: 100%;
